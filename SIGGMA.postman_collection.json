@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "91137bce-4d97-4820-acb2-99d112d015da",
-		"name": "Siggma",
+		"_postman_id": "7946bf12-44a4-4146-98fb-b3729ec1f5f8",
+		"name": "SIGGMA",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -2112,7 +2112,7 @@
 								}
 							]
 						},
-						"description": "* Insere/Atualiza o cadastro de pedidos;\n* Campos a serem enviados:\n\t* id -> Código do Pedido;\n\t* emissao -> data de emissão no formato 'dd/mm/yyyy hh:mm:ss';\n\t* cliente -> Código do cliente;\n\t* serieModelo -> string com série e modelo do pedido no formato 'serie-modelo';\n\t* cfop -> Código do CFOP do pedido;\n\t* tabelaContabil -> Código da tabela contábil;\n\t* usuario -> Código do usuário no sistema siggma;\n\t* vendedor -> Código do vendedor;\n\t* pagamentoForma -> Código da Forma de Pagamento;\n\t* pagamentoTipo -> Código do Tipo de Pagamento;\n\t* pagamentoCondicao -> Código da Condição de Pagamento;\n\t* freteTipo -> Código do Tipo de Frete;\n\t* observacoes -> string de observações do pedido;\n\t* itens -> itens (separados em array's) com os seguintes campos:\n\t\t* codigo -> Código do item no pedido;\n\t\t* quantidade -> Quantidade do item;\n\t\t* valorUnitario -> Valor unitário do item;\n\t\t* desconto -> Valor do desconto;\n\t\t* total -> Valor total do item (quantidade * valorUnitario - desconto);\n\t\t* produto -> Código do item;\n\t\t* pedido -> Código do pedido;"
+						"description": "* Insere/Atualiza o cadastro de pedidos;\n* Campos a serem enviados:\n\t* id -> Código do Pedido;\n\t* emissao -> data de emissão no formato 'dd/mm/yyyy hh:mm:ss';\n\t* cliente -> Código do cliente;\n\t* serieModelo -> string com série e modelo do pedido no formato 'serie-modelo';\n\t* cfop -> Código do CFOP do pedido;\n\t* tabelaContabil -> Código da tabela contábil;\n\t* usuario -> Código do usuário no sistema siggma;\n\t* vendedor -> Código do vendedor;\n\t* pagamentoForma -> Código da Forma de Pagamento;\n\t* pagamentoTipo -> Código do Tipo de Pagamento;\n\t* pagamentoCondicao -> Código da Condição de Pagamento;\n\t* freteTipo -> Código do Tipo de Frete;\n\t* pedsaiValFre -> Valor do Frete;\n\t* observacoes -> string de observações do pedido;\n\t* itens -> itens (separados em array's) com os seguintes campos:\n\t\t* codigo -> Código do item no pedido;\n\t\t* quantidade -> Quantidade do item;\n\t\t* valorUnitario -> Valor unitário do item;\n\t\t* desconto -> Valor do desconto;\n\t\t* total -> Valor total do item (quantidade * valorUnitario - desconto);\n\t\t* produto -> Código do item;\n\t\t* pedido -> Código do pedido;"
 					},
 					"response": []
 				}
