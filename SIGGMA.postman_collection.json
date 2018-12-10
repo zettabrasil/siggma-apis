@@ -531,6 +531,44 @@
 								"description": "* Busca de todas as tabelas de preços de itens cadastrados;\n* Retorna um .zip onde cada linha é um json válido com um registro\n\t* Arquivo inteiro não é um json válido;\n\t* Necessário tratamento manual linha a linha."
 							},
 							"response": []
+						},
+						{
+							"name": "send_tabelas_precos",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"data\": [\n\t    {\n\t        \"id\": 8,\n\t        \"datahora\": \"30/11/2018 13:57:03\",\n\t        \"usuario\": 3000,\n\t        \"descricao\": \"A vista\",\n\t        \"percentual\": 10.00,\n\t        \"padrao\": false,\n\t        \"condicaoPrazo\": false,\n\t        \"itens\": [\n\t            {\n\t                \"id\": 1,\n\t                \"usuario\": 3000,\n\t                \"manual\": false,\n\t                \"valor\": 90.00,\n\t                \"item\": 25\n\t            }\n\t        ]\n\t    },\n\t    {\n\t        \"id\": 9,\n\t        \"datahora\": \"30/11/2018 13:57:03\",\n\t        \"usuario\": 3000,\n\t        \"descricao\": \"A prazo\",\n\t        \"percentual\": -10.00,\n\t        \"padrao\": false,\n\t        \"condicaoPrazo\": true,\n\t        \"itens\": [\n\t            {\n\t                \"id\": 1,\n\t                \"usuario\": 3000,\n\t                \"manual\": false,\n\t                \"valor\": 110.00,\n\t                \"item\": 25\n\t            }\n\t        ]\n\t    }\n\t]\n}"
+								},
+								"url": {
+									"raw": "{{apiUrl}}/tabelas-precos/importar?emp={{emp}}-{{filial}}",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"tabelas-precos",
+										"importar"
+									],
+									"query": [
+										{
+											"key": "emp",
+											"value": "{{emp}}-{{filial}}"
+										}
+									]
+								},
+								"description": "* Insere/Atualiza o cadastro de tabelas de preços;\n* Campos a serem enviados:\n\t* id -> Código da tabela de preço;\n\t* datahora -> data de cadastro no formato 'dd/mm/yyyy hh:mm:ss';\n\t* usuario -> Código do usuário no sistema Siggma;\n\t* descricao -> Descrição da tabela de preço;\n\t* percentual -> percentual de desconto que o item irá sofrer ao utilizar desta tabela de preço;\n\t* padrao -> Booleano para marcar se a tabela de preço é a padrão da empresa;\n\t* condicaoPrazo -> Booleano para utilizar a tabela de preço a prazo;\n\t* itens -> itens (separados em array's) com os seguintes campos:\n\t\t* id -> Código do item na tabela de preço;\n\t\t* usuario -> Código do usuário no sistema Siggma;\n\t\t* manual -> Booleano para marcar se o valor foi calculad automaticamente ou editado pelo usuário;\n\t\t* valor -> Valor do item já calculado conforme o percentual da tabela de preço;\n\t\t* item -> Código do cadastro do item;\n* Possibilidade de enviar diversas tabelas de preços:\n\t* Dados devem estar separados em jsons válidos de tabelas de preços dentro do 'data';"
+							},
+							"response": []
 						}
 					],
 					"_postman_isSubFolder": true
