@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "7946bf12-44a4-4146-98fb-b3729ec1f5f8",
+		"_postman_id": "bb3ed450-9455-4992-a8d2-5ea62696c878",
 		"name": "SIGGMA",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -211,10 +211,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{baseUrl}}/oauth/resource",
 							"host": [
@@ -287,10 +283,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/empresa/dados?emp={{emp}}",
 							"host": [
@@ -321,10 +313,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/filiais?emp={{emp}}",
 							"host": [
@@ -354,10 +342,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/filiais/all?emp={{emp}}",
 							"host": [
@@ -388,10 +372,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/expediente?emp={{emp}}&data=2018-05-01+11:05:00",
 							"host": [
@@ -425,10 +405,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/expediente/get-horarios?emp={{emp}}&data=2018-05-01+11:05:00",
 							"host": [
@@ -471,10 +447,6 @@
 										"value": "Bearer {{token}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "{{apiUrl}}/tabelas-precos?emp={{emp}}-{{filial}}",
 									"host": [
@@ -504,10 +476,6 @@
 										"value": "application/x-www-form-urlencoded"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "{{apiUrl}}/tabelas-precos/all?emp={{emp}}&access_token={{token}}",
 									"host": [
@@ -574,6 +542,40 @@
 					"_postman_isSubFolder": true
 				},
 				{
+					"name": "galeria",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{apiUrl}}/itens/galeria?emp={{emp}}&item=1",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"itens",
+								"galeria"
+							],
+							"query": [
+								{
+									"key": "emp",
+									"value": "{{emp}}"
+								},
+								{
+									"key": "item",
+									"value": "1"
+								}
+							]
+						},
+						"description": "* Busca a galeria de imagens cadastradas para o item informado;\n* Necessário informar o item (proCod) ao fazer a consulta;\n* Retorno:\n\t* No array metadata irá retornar a chave url com a informação de onde buscar a imagem;\n\t\t* Url é parcial, a completa será formada por: sistema.zettabrasil.com.br/siggma/{metadata['url']}{data[]['imagem']}\n\t\t* data[]['imagem'] para imagem em sua resolução máxima\n\t\t* data[]['imagemMin'] para imagem em resolução 100px x 100px\n\t* No array data irá retornar array(s) com as informações das imagens que formam a galeria, onde tem-se:\n\t\t* type: o tipo da imagem (jpg, png, etc);\n\t\t* imagem: nome atribuido para a imagem (ao buscar imagem, estará em sua resolução máxima)\n\t\t* imagemMin: nome atribuido para a imagem (ao busca-la, estará em resolução 100px x 100px)"
+					},
+					"response": []
+				},
+				{
 					"name": "get_itens",
 					"request": {
 						"method": "GET",
@@ -583,10 +585,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/itens?emp={{emp}}-{{filial}}",
 							"host": [
@@ -602,7 +600,7 @@
 								}
 							]
 						},
-						"description": "* Busca de itens cadastrados;\n* Parâmetros adicionais:\n\t* Data de Atualização:\n    \t* Ex: since=2018-04-27+11:05:00;\n\t* Grupos de produtos:\n    \t* Ex 1: grupos=5;\n    \t* Ex 2: grupos=5,6,7\n\t* Tipos de produtos:\n    \t* Possibilidades:\n    \t\t* 0 - Mercadoria para Venda;\n\t\t    * 1 - Matéria Prima;\n\t\t    * 2 - Embalagem;\n\t\t    * 3 - Produto em Processo;\n\t\t    * 4 - Produto Acabado;\n\t\t    * 5 - Subproduto;\n\t\t    * 6 - Produto Intermediário;\n\t\t    * 7 - Material de Uso e Consumo;\n\t\t    * 8 - Ativo Imobilizado;\n\t\t    * 9 - Serviço;\n\t    * Ex 1: tipos=0;\n\t    * Ex 2: tipos=0,4,9;\n\t* Código do produto:\n\t    * Ex: codigo=2;\n\t* Complemento do produto:\n\t    * Ex: complemento=novidade;\n\t* Nome do produto:\n    \t* Ex: nome=cadeira;"
+						"description": "* Busca de itens cadastrados;\n* Parâmetros adicionais:\n\t* Data de Atualização:\n    \t* Ex: since=2018-04-27+11:05:00;\n\t* Grupos de produtos:\n    \t* Ex 1: grupos=5;\n    \t* Ex 2: grupos=5,6,7\n\t* Tipos de produtos:\n    \t* Possibilidades:\n    \t\t* 0 - Mercadoria para Venda;\n\t\t    * 1 - Matéria Prima;\n\t\t    * 2 - Embalagem;\n\t\t    * 3 - Produto em Processo;\n\t\t    * 4 - Produto Acabado;\n\t\t    * 5 - Subproduto;\n\t\t    * 6 - Produto Intermediário;\n\t\t    * 7 - Material de Uso e Consumo;\n\t\t    * 8 - Ativo Imobilizado;\n\t\t    * 9 - Serviço;\n\t    * Ex 1: tipos=0;\n\t    * Ex 2: tipos=0,4,9;\n\t* Código do produto:\n\t    * Ex: codigo=2;\n\t* Complemento do produto:\n\t    * Ex: complemento=novidade;\n\t* Nome do produto:\n    \t* Ex: nome=cadeira;\n* Retorno 'temGaleria':\n\t* Informação adicionada para informar caso o item possui cadastrado uma galeria de imagens;\n\t\t* Para maiores informações verifique itens > galeria."
 					},
 					"response": []
 				},
@@ -616,10 +614,6 @@
 								"value": "application/x-www-form-urlencoded"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/itens/all?emp={{emp}}&access_token={{token}}",
 							"host": [
@@ -654,10 +648,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/itens-customizados?emp={{emp}}-{{filial}}",
 							"host": [
@@ -687,10 +677,6 @@
 								"value": "application/x-www-form-urlencoded"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/itens-customizados/all?emp={{emp}}&access_token={{token}}",
 							"host": [
@@ -725,10 +711,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/itens-grupos?emp={{emp}}-{{filial}}",
 							"host": [
@@ -758,10 +740,6 @@
 								"value": "application/x-www-form-urlencoded"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/itens-grupos/all?emp={{emp}}&access_token={{token}}",
 							"host": [
@@ -796,10 +774,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/itens-subgrupos?emp={{emp}}-{{filial}}",
 							"host": [
@@ -829,10 +803,6 @@
 								"value": "application/x-www-form-urlencoded"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/itens-subgrupos/all?emp={{emp}}&access_token={{token}}",
 							"host": [
@@ -867,10 +837,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/itens-medidas?emp={{emp}}-{{filial}}",
 							"host": [
@@ -900,10 +866,6 @@
 								"value": "application/x-www-form-urlencoded"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/itens-medidas/all?emp={{emp}}&access_token={{token}}",
 							"host": [
@@ -938,10 +900,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/itens/itens-em-pedido?emp={{emp}}",
 							"host": [
@@ -972,10 +930,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/tabelas-precos?emp={{emp}}",
 							"host": [
@@ -1005,10 +959,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/itens-tabelas-precos?emp={{emp}}",
 							"host": [
@@ -1038,10 +988,6 @@
 								"value": "application/x-www-form-urlencoded"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/itens-tabelas-precos/all?emp={{emp}}&access_token={{token}}",
 							"host": [
@@ -1081,10 +1027,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/estoque-movimentacao?emp={{emp}}-{{filial}}",
 							"host": [
@@ -1114,10 +1056,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/estoque-movimentacao?emp={{emp}}-{{filial}}",
 							"host": [
@@ -1152,10 +1090,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/colaboradores?emp={{emp}}",
 							"host": [
@@ -1185,10 +1119,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/colaboradores/all?emp={{emp}}",
 							"host": [
@@ -1219,10 +1149,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/colaboradores-metas?emp={{emp}}",
 							"host": [
@@ -1252,10 +1178,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/colaboradores-pontos?emp={{emp}}",
 							"host": [
@@ -1285,10 +1207,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/colaboradores-pontos/all?emp={{emp}}",
 							"host": [
@@ -1357,10 +1275,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/funcao?emp={{emp}}",
 							"host": [
@@ -1390,10 +1304,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/funcao/all?emp={{emp}}-{{filial}}",
 							"host": [
@@ -1424,10 +1334,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/usuarios?emp={{emp}}",
 							"host": [
@@ -1457,10 +1363,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/vendedores?emp={{emp}}",
 							"host": [
@@ -1490,10 +1392,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/vendedores/all?emp={{emp}}",
 							"host": [
@@ -1532,10 +1430,6 @@
 										"value": "Bearer {{token}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "{{apiUrl}}/rotas?emp={{emp}}",
 									"host": [
@@ -1560,10 +1454,6 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "{{apiUrl}}/rotas/all?emp={{emp}}-{{filial}}&access_token={{token}}",
 									"host": [
@@ -1639,10 +1529,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/clientes?emp={{emp}}",
 							"host": [
@@ -1667,10 +1553,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/clientes/all?emp={{emp}}-{{filial}}&access_token={{token}}",
 							"host": [
@@ -1743,10 +1625,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/clientes-status?emp={{emp}}",
 							"host": [
@@ -1776,10 +1654,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/clientes-status/all?emp={{emp}}",
 							"host": [
@@ -1810,10 +1684,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/clientes-creditos?emp={{emp}}",
 							"host": [
@@ -1843,10 +1713,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/clientes-creditos/all?emp={{emp}}",
 							"host": [
@@ -1882,10 +1748,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/fornecedores?emp={{emp}}",
 							"host": [
@@ -1910,10 +1772,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/fornecedores/all?emp={{emp}}-{{filial}}&access_token={{token}}",
 							"host": [
@@ -1956,10 +1814,6 @@
 										"value": "Bearer {{token}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "{{apiUrl}}/pagamentos-formas?emp={{emp}}",
 									"host": [
@@ -1989,10 +1843,6 @@
 										"value": "Bearer {{token}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "{{apiUrl}}/pagamentos-formas/all?emp={{emp}}",
 									"host": [
@@ -2023,10 +1873,6 @@
 										"value": "Bearer {{token}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "{{apiUrl}}/pagamentos-tipos?emp={{emp}}",
 									"host": [
@@ -2056,10 +1902,6 @@
 										"value": "Bearer {{token}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "{{apiUrl}}/pagamentos-tipos/all?emp={{emp}}",
 									"host": [
@@ -2093,10 +1935,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/config-series-notas?emp={{emp}}",
 							"host": [
@@ -2213,10 +2051,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/davs/consultar?emp={{emp}}",
 							"host": [
@@ -2289,10 +2123,6 @@
 								"value": "application/json"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/davs/confirma-cupom-fiscal?emp={{emp}}-{{filial}}&id=1",
 							"host": [
@@ -2433,10 +2263,6 @@
 										"value": "Bearer {{token}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "{{apiUrl}}/documentos/danfe?emp={{emp}}",
 									"host": [
@@ -2468,10 +2294,6 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "{{apiUrl}}/nfce?emp={{emp}}-{{filial}}&access_token={{token}}",
 									"host": [
@@ -2500,10 +2322,6 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "{{apiUrl}}/nfce/get-by-titulo-serie?emp={{emp}}-{{filial}}&access_token={{token}}",
 									"host": [
@@ -2728,10 +2546,6 @@
 										"value": "Bearer {{token}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "{{apiUrl}}/nfce/cancelar-by-titulo-serie?emp={{emp}}-{{filial}}",
 									"host": [
@@ -2768,10 +2582,6 @@
 										"value": "Bearer {{token}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "{{apiUrl}}/os?emp={{emp}}",
 									"host": [
@@ -2801,10 +2611,6 @@
 										"value": "Bearer {{token}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "{{apiUrl}}/os/all?emp={{emp}}",
 									"host": [
@@ -2838,10 +2644,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/notas-saidas?emp={{emp}}",
 							"host": [
@@ -2871,10 +2673,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/notas-saidas/all?emp={{emp}}",
 							"host": [
@@ -2905,10 +2703,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/certificado/verificar?emp={{emp}}",
 							"host": [
@@ -2939,10 +2733,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/certificado/download?emp={{emp}}",
 							"host": [
@@ -3016,10 +2806,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/titulos?emp={{emp}}-{{filial}}",
 							"host": [
@@ -3049,10 +2835,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/titulos-delta-z4?emp={{emp}}-{{filial}}",
 							"host": [
@@ -3090,10 +2872,6 @@
 										"value": "Bearer {{token}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "{{apiUrl}}/ibpt?emp={{emp}}",
 									"host": [
@@ -3123,10 +2901,6 @@
 										"value": "Bearer {{token}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "{{apiUrl}}/ibpt/all?emp={{emp}}-{{filial}}",
 									"host": [
@@ -3157,10 +2931,6 @@
 										"value": "Bearer {{token}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "{{apiUrl}}/ibpt/get-aliquota?emp={{emp}}-{{filial}}",
 									"host": [
@@ -3197,10 +2967,6 @@
 										"value": "Bearer {{token}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "{{apiUrl}}/icms?emp={{emp}}",
 									"host": [
@@ -3230,10 +2996,6 @@
 										"value": "Bearer {{token}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "{{apiUrl}}/icms/all?emp={{emp}}-{{filial}}",
 									"host": [
@@ -3270,10 +3032,6 @@
 										"value": "Bearer {{token}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "{{apiUrl}}/lancamentos-contabeis?emp={{emp}}-{{filial}}",
 									"host": [
@@ -3303,10 +3061,6 @@
 										"value": "application/x-www-form-urlencoded"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "{{apiUrl}}/lancamentos-contabeis/all?emp={{emp}}&access_token={{token}}",
 									"host": [
@@ -3349,10 +3103,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/animais?emp={{emp}}",
 							"host": [
@@ -3382,10 +3132,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/animais/all?emp={{emp}}",
 							"host": [
@@ -3416,10 +3162,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/animais-historicos?emp={{emp}}",
 							"host": [
@@ -3449,10 +3191,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/animais-vacinas?emp={{emp}}",
 							"host": [
@@ -3482,10 +3220,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/animais-vacinas/all?emp=4",
 							"host": [
@@ -3521,10 +3255,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/exclusoes?emp={{emp}}",
 							"host": [
@@ -3562,10 +3292,6 @@
 										"value": "Bearer {{token}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "{{apiUrl}}/zmobile/get-versao?emp={{emp}}",
 									"host": [
@@ -3596,10 +3322,6 @@
 										"value": "Bearer {{token}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "{{apiUrl}}/zmobile/get-dados?emp={{emp}}&usuario={{usuario}}",
 									"host": [
@@ -3642,10 +3364,6 @@
 								"value": "Bearer {{token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{apiUrl}}/server/gettime",
 							"host": [
