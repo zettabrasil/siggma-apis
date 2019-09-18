@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "bb3ed450-9455-4992-a8d2-5ea62696c878",
+		"_postman_id": "0e94e132-5150-40d7-8af8-64f478028a4b",
 		"name": "SIGGMA",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -224,7 +224,8 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "empresa",
@@ -271,6 +272,7 @@
 							"response": []
 						}
 					],
+					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
@@ -429,7 +431,8 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "itens",
@@ -539,6 +542,7 @@
 							"response": []
 						}
 					],
+					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
@@ -1012,7 +1016,8 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "estoque",
@@ -1075,7 +1080,8 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "colaboradores",
@@ -1412,7 +1418,8 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "clientes",
@@ -1517,6 +1524,7 @@
 							"response": []
 						}
 					],
+					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
@@ -1544,7 +1552,7 @@
 								}
 							]
 						},
-						"description": "* Busca todos os clientes cadastrados;\n* Parâmetros Adicionais:\n\t* Data de Atualização:\n\t\t* Ex: since=2018-04-27+11:05:00;\n\t* Documento:\n\t\t* CPF ou CNPJ do cliente:\n\t\t* Ex: cpfcnpj=00000000000"
+						"description": "* Busca todos os clientes cadastrados;\n\t* Campo 'saldoLimiteCredito' corresponde a diferença entre a soma do valor pendente de todos os titulos não quitados no Sistema Siggma e o valor de limite do cadastro do cliente (campo cliLimCre)\n* Parâmetros Adicionais:\n\t* Data de Atualização:\n\t\t* Ex: since=2018-04-27+11:05:00;\n\t* Documento:\n\t\t* CPF ou CNPJ do cliente:\n\t\t* Ex: cpfcnpj=00000000000"
 					},
 					"response": []
 				},
@@ -1733,7 +1741,8 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "fornecedores",
@@ -1796,7 +1805,8 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "pedido",
@@ -1923,6 +1933,7 @@
 							"response": []
 						}
 					],
+					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
@@ -1992,7 +2003,8 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "cupom",
@@ -2039,6 +2051,7 @@
 							"response": []
 						}
 					],
+					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
@@ -2245,7 +2258,8 @@
 						]
 					}
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "notas",
@@ -2284,6 +2298,7 @@
 							"response": []
 						}
 					],
+					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
@@ -2567,6 +2582,7 @@
 							"response": []
 						}
 					],
+					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
@@ -2632,6 +2648,7 @@
 							"response": []
 						}
 					],
+					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
@@ -2791,7 +2808,8 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "titulos",
@@ -2854,7 +2872,8 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "contabil",
@@ -2952,6 +2971,7 @@
 							"response": []
 						}
 					],
+					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
@@ -3017,6 +3037,7 @@
 							"response": []
 						}
 					],
+					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
@@ -3086,9 +3107,11 @@
 							"response": []
 						}
 					],
+					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "petshop",
@@ -3240,7 +3263,8 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "exclusoes",
@@ -3274,7 +3298,8 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "mobile",
@@ -3347,9 +3372,11 @@
 							"response": []
 						}
 					],
+					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "server",
@@ -3378,7 +3405,8 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		}
 	],
 	"event": [
@@ -3452,5 +3480,6 @@
 			"value": "MD5 DA SENHA",
 			"type": "string"
 		}
-	]
+	],
+	"protocolProfileBehavior": {}
 }
