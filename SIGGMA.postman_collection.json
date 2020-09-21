@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "aaf4f368-dcef-4ec4-ab0f-45cfde5efe87",
+		"_postman_id": "8d9efd05-2302-47f1-8d4e-6541f993cf56",
 		"name": "SIGGMA",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -14,7 +14,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "828d028b-1456-4f74-aeef-6bd0153f390c",
+								"id": "63c229a9-ce00-49bd-abd7-e9b314568b78",
 								"exec": [
 									"pm.environment.set(\"token\", pm.response.json().access_token);"
 								],
@@ -125,9 +125,9 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "47cb5490-b551-4417-a4e5-77d8cccfb015",
+								"id": "28d47085-7f6d-4f5d-a696-493ae5bb9f4d",
 								"exec": [
-									"pm.environment.set(\"usuario\", pm.response.json().us_reg_idx);"
+									"pm.environment.set(\"usuario\", pm.response.json().data);"
 								],
 								"type": "text/javascript"
 							}
@@ -166,11 +166,12 @@
 							]
 						},
 						"url": {
-							"raw": "{{apiUrl}}/usuarios/login",
+							"raw": "{{baseUrl}}/api/usuarios/login",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"usuarios",
 								"login"
 							]
@@ -196,11 +197,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/animais?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/animais?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"animais"
 							],
 							"query": [
@@ -225,11 +227,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/animais/all?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/animais/all?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"animais",
 								"all"
 							],
@@ -255,11 +258,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/animais-historicos?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/animais-historicos?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"animais-historicos"
 							],
 							"query": [
@@ -284,11 +288,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/animais-vacinas?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/animais-vacinas?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"animais-vacinas"
 							],
 							"query": [
@@ -313,11 +318,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/animais-vacinas/all?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/animais-vacinas/all?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"animais-vacinas",
 								"all"
 							],
@@ -337,7 +343,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "3a362c45-42e7-4a6f-9821-3452f4afca4c",
+						"id": "6271c04d-d89e-4c22-8b6d-cf90946e482d",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -347,7 +353,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "9ce59ff7-2e82-4e72-99f3-87d6e3d4e30d",
+						"id": "e5fe810a-b0d7-4d00-8aef-3077f99b57b3",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -379,11 +385,12 @@
 							"raw": "{\n  \"data\": [\n    {\n      \"id\": 1,\n      \"filial\": 1,\n      \"horario\": \"27/04/2018 13:30:00\",\n      \"quantidade\": 1,\n      \"animal\": 1,\n      \"veiculo\": 1\n    }\n  ]\n}"
 						},
 						"url": {
-							"raw": "{{apiUrl}}/atendimentos-horarios/importar?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/atendimentos-horarios/importar?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"atendimentos-horarios",
 								"importar"
 							],
@@ -420,11 +427,12 @@
 							"raw": "{\n  \"data\": [\n    {\n      \"id\": 1,\n      \"filial\": 1,\n      \"horario\": \"27/04/2018 13:30:00\",\n      \"quantidade\": 1,\n      \"animal\": 1,\n      \"veiculo\": 1\n    }\n  ]\n}"
 						},
 						"url": {
-							"raw": "{{apiUrl}}/atendimentos-horarios?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/atendimentos-horarios?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"atendimentos-horarios"
 							],
 							"query": [
@@ -449,11 +457,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/expediente/get-horarios?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/expediente/get-horarios?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"expediente",
 								"get-horarios"
 							],
@@ -495,11 +504,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{apiUrl}}/caixas-movimentos/importar?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/caixas-movimentos/importar?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"caixas-movimentos",
 								"importar"
 							],
@@ -535,11 +545,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{apiUrl}}/caixas-sangria-suprimento/importarSangria?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/caixas-sangria-suprimento/importarSangria?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"caixas-sangria-suprimento",
 								"importarSangria"
 							],
@@ -575,11 +586,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{apiUrl}}/caixas-sangria-suprimento/importarSuprimento?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/caixas-sangria-suprimento/importarSuprimento?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"caixas-sangria-suprimento",
 								"importarSuprimento"
 							],
@@ -612,11 +624,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/certificado/verificar?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/certificado/verificar?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"certificado",
 								"verificar"
 							],
@@ -642,11 +655,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/certificado/download?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/certificado/download?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"certificado",
 								"download"
 							],
@@ -686,11 +700,12 @@
 							"raw": "{\n    \"metadata\": {\n        \"paginas\": 1,\n        \"pagina\": 1\n    },\n    \"data\": [\n        {\n            \"cliTpo\": \"F\",\n            \"cliDoc\": \"000.000.000-00\",\n            \"cliCodCon\": \"\",\n            \"cliLimCre\": null,\n            \"cliDatCad\": \"15/09/2016\",\n            \"cliValDes\": \"0.00\",\n            \"cliNeg\": false,\n            \"cliObs\": \"\",\n            \"cliSenha\": \"        \",\n            \"cliLogin\": \"        \",\n            \"cliCodOri\": null,\n            \"cliIncra\": null,\n            \"cliInsProRur\": \"NULL\",\n            \"dataAtualizacao\": \"15/09/2016 08:53:30\",\n            \"cliCom\": null,\n            \"cliObsAdi\": \"[]\",\n            \"usaDotz\": false,\n            \"cliObsNfe\": false,\n            \"juros\": \"0.00\",\n            \"multa\": \"0.00\",\n            \"orgaoPublico\": false,\n            \"pessoa\": {\n                \"tipo\": \"F\",\n                \"nome\": \"CONSUMIDOR FINAL\",\n                \"dataNascimento\": \"\",\n                \"cpfcnpj\": \"000.000.000-00\",\n                \"rginsc\": null,\n                \"apelidoFantasia\": null,\n                \"endereco\": \"CONSUMIDOR FINAL\",\n                \"complemento\": null,\n                \"bairro\": \"CONSUMIDOR FINAL\",\n                \"cep\": \"89870-000\",\n                \"municipio\": \"CONSUMIDOR FINAL\",\n                \"uf\": \"SC\",\n                \"telefone\": null,\n                \"celular\": null,\n                \"email\": null,\n                \"site\": null,\n                \"fax\": null,\n                \"numero\": null,\n                \"municipioIbge\": 420420,\n                \"paisIbge\": 1058,\n                \"sexo\": \"M\",\n                \"nacionalidade\": null,\n                \"estadoCivil\": null,\n                \"profissao\": null,\n                \"capacidadeCivil\": \"M\",\n                \"atividade\": null,\n                \"inscricaoMunicipal\": null,\n                \"codRegimeTributario\": null,\n                \"suframa\": null,\n                \"cnae\": null,\n                \"codAtividade\": null,\n                \"salario\": \"0.00\",\n                \"dataAdmissao\": \"\",\n                \"observacoes\": null,\n                \"proximidades\": null,\n                \"rntrc\": null,\n                \"latitude\": null,\n                \"longitude\": null,\n                \"dataAtualizacao\": \"23/05/2017 16:26:59\",\n                \"cnh\": null,\n                \"ctps\": null,\n                \"vinculos\": [],\n                \"enderecos\": [],\n                \"contatos\": [],\n                \"contato\": \" - CONSUMIDOR FINAL - CONSUMIDOR FINAL - SC\"\n            },\n            \"condicaoPagamento\": 0,\n            \"status\": 1,\n            \"formaPagamento\": 1,\n            \"observacaoGeral\": null,\n            \"vendedor\": null,\n            \"tipoPagamento\": 4,\n            \"credito\": null,\n            \"contaCorrente\": null,\n            \"exportarBanco\": true,\n            \"consumidorFinal\": null,\n            \"tabelaPreco\": null,\n            \"codigoIntegracao\": null,\n            \"iugu\": null,\n            \"dataAprovacao\": \"\",\n            \"observacao\": null,\n            \"aprovador\": null,\n            \"avalista\": null,\n            \"conta\": null,\n            \"saldo\": 0,\n            \"creditoSaldo\": 0,\n            \"observacoes\": null\n        }\n    ]\n}"
 						},
 						"url": {
-							"raw": "{{apiUrl}}/clientes/importar?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/clientes/importar?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"clientes",
 								"importar"
 							],
@@ -716,11 +731,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/clientes?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/clientes?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"clientes"
 							],
 							"query": [
@@ -740,11 +756,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{apiUrl}}/clientes/all?emp={{emp}}-{{filial}}&access_token={{token}}",
+							"raw": "{{baseUrl}}/api/clientes/all?emp={{emp}}-{{filial}}&access_token={{token}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"clientes",
 								"all"
 							],
@@ -774,11 +791,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/clientes-creditos?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/clientes-creditos?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"clientes-creditos"
 							],
 							"query": [
@@ -803,11 +821,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/clientes-creditos/all?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/clientes-creditos/all?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"clientes-creditos",
 								"all"
 							],
@@ -833,11 +852,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/clientes-status?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/clientes-status?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"clientes-status"
 							],
 							"query": [
@@ -862,11 +882,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/clientes-status/all?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/clientes-status/all?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"clientes-status",
 								"all"
 							],
@@ -898,11 +919,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/colaboradores?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/colaboradores?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"colaboradores"
 							],
 							"query": [
@@ -927,11 +949,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/colaboradores/all?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/colaboradores/all?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"colaboradores",
 								"all"
 							],
@@ -957,11 +980,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/colaboradores-metas?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/colaboradores-metas?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"colaboradores-metas"
 							],
 							"query": [
@@ -994,11 +1018,12 @@
 							"raw": "{\n  \"data\": [\n    {\n      \"id\": 876334,\n      \"saldo\": 532.5,\n      \"emissao\": \"27/04/2018 14:32:47\",\n      \"colaborador\": 3\n    }\n  ]\n}"
 						},
 						"url": {
-							"raw": "{{apiUrl}}/colaboradores-pontos/importar?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/colaboradores-pontos/importar?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"colaboradores-pontos",
 								"importar"
 							],
@@ -1024,11 +1049,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/colaboradores-pontos?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/colaboradores-pontos?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"colaboradores-pontos"
 							],
 							"query": [
@@ -1053,11 +1079,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/colaboradores-pontos/all?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/colaboradores-pontos/all?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"colaboradores-pontos",
 								"all"
 							],
@@ -1089,11 +1116,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/config-series-notas?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/config-series-notas?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"config-series-notas"
 							],
 							"query": [
@@ -1118,11 +1146,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/configuracoes/pedidos?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/configuracoes/pedidos?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"configuracoes",
 								"pedidos"
 							],
@@ -1156,11 +1185,12 @@
 							"raw": "[\n    {\n        \"banco\": \"2894\",\n        \"nomeBanco\": \"BANCO DO BRASIL\",\n        \"agencia\": \"1\",\n        \"conta\": \"222-4444\",\n        \"titular\": \"WILSON C. SAVEGNAGO\",\n        \"convenio\": \"1111111\",\n        \"codCedente\": \"01677\"\n\n    }\n]"
 						},
 						"url": {
-							"raw": "{{apiUrl}}/contas-bancarias/importar?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/contas-bancarias/importar?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"contas-bancarias",
 								"importar"
 							],
@@ -1190,11 +1220,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/contas-bancarias?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/contas-bancarias?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"contas-bancarias"
 							],
 							"query": [
@@ -1219,11 +1250,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/documentos/danfe?emp={{emp}}&id=14400",
+							"raw": "{{baseUrl}}/api/documentos/danfe?emp={{emp}}&id=14400",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"documentos",
 								"danfe"
 							],
@@ -1263,11 +1295,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/empresa/dados?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/empresa/dados?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"empresa",
 								"dados"
 							],
@@ -1293,11 +1326,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/empresa/suporte?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/empresa/suporte?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"empresa",
 								"suporte"
 							],
@@ -1323,11 +1357,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/expediente?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/expediente?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"expediente"
 							],
 							"query": [
@@ -1352,11 +1387,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/expediente/get-horarios?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/expediente/get-horarios?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"expediente",
 								"get-horarios"
 							],
@@ -1382,11 +1418,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/filiais?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/filiais?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"filiais"
 							],
 							"query": [
@@ -1411,11 +1448,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/filiais/all?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/filiais/all?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"filiais",
 								"all"
 							],
@@ -1435,7 +1473,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "c1051303-50d7-4ba1-b979-6d2a4f0daca4",
+						"id": "3a4e28ef-bbf8-4c28-b03d-55cf9a7b58fc",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1445,7 +1483,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "e981bb26-fb61-4d52-87f7-5705aaeb5880",
+						"id": "0f67fcf8-61f6-491f-8186-fc58b10f47e3",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1477,11 +1515,12 @@
 							"raw": "[\n    {\n        \"guid\": \"{{ACC73EA8-9BBB-48F7-ADA5-3D72EC10977F}}\",\n        \"caiCod\": 2,\n        \"cupCod\": 1680,\n        \"ecfCod\": 2,\n        \"cliCod\": 936,\n        \"davCod\": \"\",\n        \"cupCcf\": 6508,\n        \"cupCoo\": 11080,\n        \"cupDat\": \"2020-09-05\",\n        \"cupHor\": \"08:59:10\",\n        \"cupCan\": \"N\",\n        \"venCod\": 1,\n        \"cupEst\": \"F\",\n        \"opeCod\": 1,\n        \"cupObs\": \"Exemplo\",\n        \"cupSubTot\": 10.50,\n        \"cupIndDes\": \"V\",\n        \"cupIndAcr\": \"V\",\n        \"cupTotLiq\": 10.50,\n        \"cupCliNom\": \"FERRAGEM PANSERA LTDA EPP\",\n        \"cupCliDoc\": \"20412280000152\",\n        \"cupExportado\": false,\n        \"cupDesSubTot\": 0.00,\n        \"cupAcrSubTot\": 0.00,\n        \"cupOrdDesAcr\": \"D\",\n        \"idMovimento\": \"1219\",\n        \"cupVendamanualNum\": 0,\n        \"cupVendamanualSerie\": null,\n        \"cupVendamanualSubserie\": null,\n        \"itens\":[\n            {\n                \"cupCod\": 1680,\n                \"proCod\": 4403,\n                \"proDes\": \"PANO LIMPEZA\",\n                \"proIat\": \"T\",\n                \"proIppt\": \"T\",\n                \"proGtin\": 2010000000000,\n                \"aliqIbpt\": 10.00,\n                \"cupiteNum\": 1,\n                \"cupiteQtd\": 1.0000,\n                \"cupiteVal\": 10.5000,\n                \"cupiteCan\": \"N\",\n                \"proUniMed\": \"UN\",\n                \"cupiteValLiq\": 10.50,\n                \"cupiteValDes\": 0.00,\n                \"cupiteValAcr\": 0.00,\n                \"cupiteTotPar\": \"F1\",\n                \"cupiteQtdCan\": 0.0000,\n                \"cupiteValCan\": 0.0000,\n                \"cupiteValicms\": 0.00,\n                \"cupiteValAliq\": 0.00,\n                \"cupiteBaseicms\": 10.50,\n                \"cupiteCasasVal\": 3,\n                \"cupiteCasasQtd\": 3,\n                \"cupiteTotBruto\": 10.50,\n                \"cupiteValCanAcr\": 0.00,\n                \"cupiteValLiqOri\": 10.50,\n                \"cupiteIndiceAliquotaCcf\": null,\n                \"codLocalEstoque\": 1,\n                \"promocoes\": null\n            }],\n        \"condicaoPagamento\":[\n            {\n                \"cupCod\": 1680,\n                \"meiDes\": \"Dinheiro\",\n                \"meiVal\": 10.50,\n                \"docCod\": 1,\n                \"meiOrd\": 2,\n                \"meiIndice\": 5,\n                \"meiIndEst\": \"N\",\n                \"meiValEst\": 0.00,\n                \"aprazo\": false\n            }\n        ],\n        \"parcelas\":[\n            {\n                \"cupCod\": 301,\n                \"cupparNum\": 2,\n                \"cupparVal\": 10.50,\n                \"cupparDatVen\": \"2020-02-11\",\n                \"meioPagamento\": 10\n            }\n        ]\n    }\n\n]\n"
 						},
 						"url": {
-							"raw": "{{apiUrl}}/cupons/importar?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/cupons/importar?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"cupons",
 								"importar"
 							],
@@ -1507,11 +1546,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/davs/consultar?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/davs/consultar?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"davs",
 								"consultar"
 							],
@@ -1537,11 +1577,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/davs/get-by-comanda?emp={{emp}}&comanda=10",
+							"raw": "{{baseUrl}}/api/davs/get-by-comanda?emp={{emp}}&comanda=10",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"davs",
 								"get-by-comanda"
 							],
@@ -1575,11 +1616,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/davs/confirma-cupom-fiscal?emp={{emp}}-{{filial}}&id=2",
+							"raw": "{{baseUrl}}/api/davs/confirma-cupom-fiscal?emp={{emp}}-{{filial}}&id=2",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"davs",
 								"confirma-cupom-fiscal"
 							],
@@ -1617,11 +1659,12 @@
 							"raw": "\n[\n    {\n        \"ecfCodNacional\": 100011,\n        \"ecfSerie\": \"DR0509BR000000181266\",\n        \"ecfTipo\": \"ECF-IF\",\n        \"ecfMarca\": \"ELGIN\",\n        \"ecfModelo\": \"FS-700H\",\n        \"ecfVersao\": \"01.00.05\",\n        \"ecfLe\": 1,\n        \"ecfLef\": 1,\n        \"ecfMfd\": \"S\",\n        \"ecfCrenamfd\": \"N\",\n        \"ecfDocto\": 1,\n        \"ecfSbDatIns\": \"2009-09-09\",\n        \"ecfSbHorIns\": \"08:18:24\",\n        \"ecfMfAdc\": \"N\",\n        \"ecfNumSeq\": 1,\n        \"ecfCod\": 1,\n        \"caiCod\": 1\n    }\n\n]"
 						},
 						"url": {
-							"raw": "{{apiUrl}}/ecfs/importar?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/ecfs/importar?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"ecfs",
 								"importar"
 							],
@@ -1655,11 +1698,12 @@
 							"raw": "[\n    {\n        \"caiCod\": 1,\n        \"ecfCod\": 1,\n        \"docCoo\": 8677,\n        \"docGnf\": 0,\n        \"docGrg\": 0,\n        \"docCdc\": 0,\n        \"docDen\": \"RZ\",\n        \"docDat\": \"06/02/2018\",\n        \"docHor\": \"15:13:33\"\n    }\n]"
 						},
 						"url": {
-							"raw": "{{apiUrl}}/paf-documentos-emitidos/importar?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/paf-documentos-emitidos/importar?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"paf-documentos-emitidos",
 								"importar"
 							],
@@ -1693,11 +1737,12 @@
 							"raw": "[\n    {\n        \"redCod\": 544,\n        \"redCrz\": 643,\n        \"redCoo\": 11078,\n        \"redCro\": 77,\n        \"redDatMov\": \"2020-09-03\",\n        \"redDatEmi\": \"2020-09-08\",\n        \"redHorEmi\": \"09:11:54\",\n        \"redVenBru\": 748.30,\n        \"redInsIssqn\": \"N\",\n        \"redGt\": 23103388.25,\n        \"redExportado\": \"false\",\n        \"ecfCod\": 4,\n        \"opeCod\": 1,\n        \"caiCod\": 2\n    }\n]"
 						},
 						"url": {
-							"raw": "{{apiUrl}}/reducoesz/importar?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/reducoesz/importar?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"reducoesz",
 								"importar"
 							],
@@ -1717,7 +1762,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "9dca758d-f536-46f0-9d67-77b96230ac9b",
+						"id": "690b6206-8442-4143-ab22-96c96f89307e",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1727,7 +1772,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "7a97f31d-9f5e-4741-867e-87ced7e43631",
+						"id": "e7bfa20b-b011-4e8c-b421-af07c9184f87",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1751,11 +1796,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/estoque?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/estoque?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"estoque"
 							],
 							"query": [
@@ -1780,11 +1826,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/estoque/all?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/estoque/all?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"estoque",
 								"all"
 							],
@@ -1810,11 +1857,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/estoque-local?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/estoque-local?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"estoque-local"
 							],
 							"query": [
@@ -1839,11 +1887,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/estoque-local/all?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/estoque-local/all?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"estoque-local",
 								"all"
 							],
@@ -1869,11 +1918,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/estoque-movimentacao?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/estoque-movimentacao?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"estoque-movimentacao"
 							],
 							"query": [
@@ -1898,11 +1948,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/estoque-movimentacao?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/estoque-movimentacao?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"estoque-movimentacao"
 							],
 							"query": [
@@ -1933,11 +1984,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/exclusoes?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/exclusoes?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"exclusoes"
 							],
 							"query": [
@@ -1968,11 +2020,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/fornecedores?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/fornecedores?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"fornecedores"
 							],
 							"query": [
@@ -1992,11 +2045,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{apiUrl}}/fornecedores/all?emp={{emp}}-{{filial}}&access_token={{token}}",
+							"raw": "{{baseUrl}}/api/fornecedores/all?emp={{emp}}-{{filial}}&access_token={{token}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"fornecedores",
 								"all"
 							],
@@ -2032,11 +2086,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/funcao?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/funcao?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"funcao"
 							],
 							"query": [
@@ -2061,11 +2116,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/funcao/all?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/funcao/all?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"funcao",
 								"all"
 							],
@@ -2086,7 +2142,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "8d7d2373-47f4-47a8-ab8b-23fd33b8072f",
+						"id": "888d776e-7333-4a5e-8f5f-91fd33b8d3ca",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -2096,7 +2152,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "ed02e72b-5056-4f6b-9457-a6946ad19e21",
+						"id": "4e263a53-0440-4c66-9672-b88c98b58b98",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -2123,11 +2179,12 @@
 									}
 								],
 								"url": {
-									"raw": "{{apiUrl}}/ibpt?emp={{emp}}",
+									"raw": "{{baseUrl}}/api/ibpt?emp={{emp}}",
 									"host": [
-										"{{apiUrl}}"
+										"{{baseUrl}}"
 									],
 									"path": [
+										"api",
 										"ibpt"
 									],
 									"query": [
@@ -2152,11 +2209,12 @@
 									}
 								],
 								"url": {
-									"raw": "{{apiUrl}}/ibpt/all?emp={{emp}}-{{filial}}",
+									"raw": "{{baseUrl}}/api/ibpt/all?emp={{emp}}-{{filial}}",
 									"host": [
-										"{{apiUrl}}"
+										"{{baseUrl}}"
 									],
 									"path": [
+										"api",
 										"ibpt",
 										"all"
 									],
@@ -2182,11 +2240,12 @@
 									}
 								],
 								"url": {
-									"raw": "{{apiUrl}}/ibpt/get-aliquota?emp={{emp}}-{{filial}}&uf=SC&ncm=29142920",
+									"raw": "{{baseUrl}}/api/ibpt/get-aliquota?emp={{emp}}-{{filial}}&uf=SC&ncm=29142920",
 									"host": [
-										"{{apiUrl}}"
+										"{{baseUrl}}"
 									],
 									"path": [
+										"api",
 										"ibpt",
 										"get-aliquota"
 									],
@@ -2227,11 +2286,12 @@
 									}
 								],
 								"url": {
-									"raw": "{{apiUrl}}/icms?emp={{emp}}",
+									"raw": "{{baseUrl}}/api/icms?emp={{emp}}",
 									"host": [
-										"{{apiUrl}}"
+										"{{baseUrl}}"
 									],
 									"path": [
+										"api",
 										"icms"
 									],
 									"query": [
@@ -2256,11 +2316,12 @@
 									}
 								],
 								"url": {
-									"raw": "{{apiUrl}}/icms/all?emp={{emp}}-{{filial}}",
+									"raw": "{{baseUrl}}/api/icms/all?emp={{emp}}-{{filial}}",
 									"host": [
-										"{{apiUrl}}"
+										"{{baseUrl}}"
 									],
 									"path": [
+										"api",
 										"icms",
 										"all"
 									],
@@ -2293,11 +2354,12 @@
 									}
 								],
 								"url": {
-									"raw": "{{apiUrl}}/lancamentos-contabeis?emp={{emp}}-{{filial}}",
+									"raw": "{{baseUrl}}/api/lancamentos-contabeis?emp={{emp}}-{{filial}}",
 									"host": [
-										"{{apiUrl}}"
+										"{{baseUrl}}"
 									],
 									"path": [
+										"api",
 										"lancamentos-contabeis"
 									],
 									"query": [
@@ -2322,11 +2384,12 @@
 									}
 								],
 								"url": {
-									"raw": "{{apiUrl}}/lancamentos-contabeis/all?emp={{emp}}&access_token={{token}}",
+									"raw": "{{baseUrl}}/api/lancamentos-contabeis/all?emp={{emp}}&access_token={{token}}",
 									"host": [
-										"{{apiUrl}}"
+										"{{baseUrl}}"
 									],
 									"path": [
+										"api",
 										"lancamentos-contabeis",
 										"all"
 									],
@@ -2350,7 +2413,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "96b63812-8a9d-471c-92aa-5e09f5238c43",
+								"id": "00bd4577-e3a8-42e9-8ac4-2acd67ac9e75",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -2360,7 +2423,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "8c49fc74-1fbf-4ccc-a3b2-7b888cf80fe0",
+								"id": "6f6fd56e-4dcc-438c-b5e0-03fb10043227",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -2388,11 +2451,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/itens?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/itens?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"itens"
 							],
 							"query": [
@@ -2417,11 +2481,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/itens/all?emp={{emp}}&access_token={{token}}",
+							"raw": "{{baseUrl}}/api/itens/all?emp={{emp}}&access_token={{token}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"itens",
 								"all"
 							],
@@ -2451,11 +2516,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/itens/get-estoque?emp={{emp}}&access_token={{token}}&item=1",
+							"raw": "{{baseUrl}}/api/itens/get-estoque?emp={{emp}}&access_token={{token}}&item=1",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"itens",
 								"get-estoque"
 							],
@@ -2498,11 +2564,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{apiUrl}}/itens/acerto-estoque?emp={{emp}}&access_token={{token}}",
+							"raw": "{{baseUrl}}/api/itens/acerto-estoque?emp={{emp}}&access_token={{token}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"itens",
 								"acerto-estoque"
 							],
@@ -2541,11 +2608,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{apiUrl}}/itens/zcan?emp={{emp}}&access_token={{token}}",
+							"raw": "{{baseUrl}}/api/itens/zcan?emp={{emp}}&access_token={{token}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"itens",
 								"zcan"
 							],
@@ -2575,11 +2643,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/itens/itens-em-pedido?emp={{emp}}&access_token={{token}}",
+							"raw": "{{baseUrl}}/api/itens/itens-em-pedido?emp={{emp}}&access_token={{token}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"itens",
 								"itens-em-pedido"
 							],
@@ -2609,11 +2678,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/itens/blocox?emp={{emp}}&access_token={{token}}",
+							"raw": "{{baseUrl}}/api/itens/blocox?emp={{emp}}&access_token={{token}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"itens",
 								"blocox"
 							],
@@ -2653,11 +2723,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{apiUrl}}/itens/vendas-lista-presentes?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/itens/vendas-lista-presentes?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"itens",
 								"vendas-lista-presentes"
 							],
@@ -2688,11 +2759,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/itens/lista-presentes?emp={{emp}}&access_token={{token}}",
+							"raw": "{{baseUrl}}/api/itens/lista-presentes?emp={{emp}}&access_token={{token}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"itens",
 								"lista-presentes"
 							],
@@ -2722,11 +2794,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/itens/galeria?emp={{emp}}&item=1",
+							"raw": "{{baseUrl}}/api/itens/galeria?emp={{emp}}&item=1",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"itens",
 								"galeria"
 							],
@@ -2756,11 +2829,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/itens-customizados?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/itens-customizados?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"itens-customizados"
 							],
 							"query": [
@@ -2785,11 +2859,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/itens-customizados/all?emp={{emp}}&access_token={{token}}",
+							"raw": "{{baseUrl}}/api/itens-customizados/all?emp={{emp}}&access_token={{token}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"itens-customizados",
 								"all"
 							],
@@ -2819,11 +2894,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/itens-grupos?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/itens-grupos?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"itens-grupos"
 							],
 							"query": [
@@ -2848,11 +2924,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/itens-grupos/all?emp={{emp}}&access_token={{token}}",
+							"raw": "{{baseUrl}}/api/itens-grupos/all?emp={{emp}}&access_token={{token}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"itens-grupos",
 								"all"
 							],
@@ -2882,11 +2959,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/itens-medidas?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/itens-medidas?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"itens-medidas"
 							],
 							"query": [
@@ -2911,11 +2989,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/itens-medidas/all?emp={{emp}}&access_token={{token}}",
+							"raw": "{{baseUrl}}/api/itens-medidas/all?emp={{emp}}&access_token={{token}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"itens-medidas",
 								"all"
 							],
@@ -2945,11 +3024,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/itens-subgrupos?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/itens-subgrupos?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"itens-subgrupos"
 							],
 							"query": [
@@ -2974,11 +3054,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/itens-subgrupos/all?emp={{emp}}&access_token={{token}}",
+							"raw": "{{baseUrl}}/api/itens-subgrupos/all?emp={{emp}}&access_token={{token}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"itens-subgrupos",
 								"all"
 							],
@@ -3008,11 +3089,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/itens-tabelas-precos?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/itens-tabelas-precos?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"itens-tabelas-precos"
 							],
 							"query": [
@@ -3037,11 +3119,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/itens-tabelas-precos/all?emp={{emp}}&access_token={{token}}",
+							"raw": "{{baseUrl}}/api/itens-tabelas-precos/all?emp={{emp}}&access_token={{token}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"itens-tabelas-precos",
 								"all"
 							],
@@ -3085,11 +3168,12 @@
 							"raw": "{\n\t\"data\": [{\n\t\t\"movimento\":{\n\t\t\t\"IdMovimento\":7,\n\t\t\t\"DataAberturaMovimento\":\"03/01/2018\",\n\t\t\t\"HoraAberturaMovimento\":\"17:32:31\",\n\t\t\t\"CodOperador\":1,\n\t\t\t\"DataFechamentoMovimento\":\"\",\n\t\t\t\"HoraFechamentoMovimento\":\"\",\n\t\t\t\"StatusMovimento\":\"A\",\n\t\t\t\"ObsMovimento\":\"\",\n\t\t\t\"idCaixa\":101\n\t\t},\n\t\t\"idNota\":25,\n\t\t\"xmlProt\":\"<?xml version=\\\"1.0\\\" encoding=\\\"UTF-8\\\"?><nfeProc versao=\\\"3.10\\\" xmlns=\\\"http://www.portalfiscal.inf.br/nfe\\\"><NFe xmlns=\\\"http://www.portalfiscal.inf.br/nfe\\\"><infNFe versao=\\\"3.10\\\" Id=\\\"NFe43180191241034000123651010000011931000000250\\\"><ide><cUF>43</cUF><cNF>00000025</cNF><natOp>VENDA PRODUCAO DO ESTABELECIMENTO DENTRO DO ESTADO</natOp><indPag>0</indPag><mod>65</mod><serie>101</serie><nNF>1193</nNF><dhEmi>2018-01-12T15:39:13-02:00</dhEmi><tpNF>1</tpNF><idDest>1</idDest><cMunFG>4307005</cMunFG><tpImp>4</tpImp><tpEmis>1</tpEmis><cDV>0</cDV><tpAmb>2</tpAmb><finNFe>1</finNFe><indFinal>1</indFinal><indPres>1</indPres><procEmi>0</procEmi><verProc>2.0.0.3</verProc></ide><emit><CNPJ>91241034000123</CNPJ><xNome>TESTE NFCE</xNome><xFant>METALURGICA VALENTINI LTDA</xFant><enderEmit><xLgr>ESTRADA DO TESTE</xLgr><nro>1327</nro><xCpl>BLOCO DO TESTE</xCpl><xBairro>COMENDADOR TESTADOR</xBairro><cMun>4307005</cMun><xMun>ERECHIM</xMun><UF>RS</UF><CEP>99700971</CEP><cPais>1058</cPais><xPais>BRASIL</xPais><fone>5435192610</fone></enderEmit><IE>0390041203</IE><IM>5897</IM><CNAE>2869100</CNAE><CRT>1</CRT></emit><det nItem=\\\"1\\\"><prod><cProd>01</cProd><cEAN/><xProd>NOTA FISCAL EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL</xProd><NCM>29033912</NCM><CEST>1701700</CEST><CFOP>5405</CFOP><uCom>UN</uCom><qCom>1.0000</qCom><vUnCom>10.0000000000</vUnCom><vProd>10.00</vProd><cEANTrib/><uTrib>UN</uTrib><qTrib>1.0000</qTrib><vUnTrib>10.0000000000</vUnTrib><indTot>1</indTot></prod><imposto><vTotTrib>0.42</vTotTrib><ICMS><ICMSSN500><orig>0</orig><CSOSN>500</CSOSN></ICMSSN500></ICMS><PIS><PISOutr><CST>99</CST><vBC>10.00</vBC><pPIS>0.0000</pPIS><vPIS>0.00</vPIS></PISOutr></PIS><COFINS><COFINSOutr><CST>99</CST><vBC>10.00</vBC><pCOFINS>0.0000</pCOFINS><vCOFINS>0.00</vCOFINS></COFINSOutr></COFINS></imposto></det><total><ICMSTot><vBC>0.00</vBC><vICMS>0.00</vICMS><vICMSDeson>0.00</vICMSDeson><vBCST>0.00</vBCST><vST>0.00</vST><vProd>10.00</vProd><vFrete>0.00</vFrete><vSeg>0.00</vSeg><vDesc>0.00</vDesc><vII>0.00</vII><vIPI>0.00</vIPI><vPIS>0.00</vPIS><vCOFINS>0.00</vCOFINS><vOutro>0.00</vOutro><vNF>10.00</vNF><vTotTrib>0.42</vTotTrib></ICMSTot></total><transp><modFrete>9</modFrete></transp><pag><tPag>01</tPag><vPag>10.00</vPag></pag><infAdic><infCpl>PDV: 101</infCpl></infAdic></infNFe><infNFeSupl><qrCode><![CDATA[https://www.sefaz.rs.gov.br/NFCE/NFCE-COM.aspx?chNFe=43180191241034000123651010000011931000000250&nVersao=100&tpAmb=2&dhEmi=323031382D30312D31325431353A33393A31332D30323A3030&vNF=10.00&vICMS=0.00&digVal=6D71567432314352444E71307A30385376387A2F2F33446D5A58303D&cIdToken=000001&cHashQRCode=DA8F2BE75B27F3C48097F22357CF8BAD90FCE67F]]></qrCode></infNFeSupl><Signature xmlns=\\\"http://www.w3.org/2000/09/xmldsig#\\\"><SignedInfo><CanonicalizationMethod Algorithm=\\\"http://www.w3.org/TR/2001/REC-xml-c14n-20010315\\\"/><SignatureMethod Algorithm=\\\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\\\"/><Reference URI=\\\"#NFe43180191241034000123651010000011931000000250\\\"><Transforms><Transform Algorithm=\\\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\\\"/><Transform Algorithm=\\\"http://www.w3.org/TR/2001/REC-xml-c14n-20010315\\\"/></Transforms><DigestMethod Algorithm=\\\"http://www.w3.org/2000/09/xmldsig#sha1\\\"/><DigestValue>mqVt21CRDNq0z08Sv8z//3DmZX0=</DigestValue></Reference></SignedInfo><SignatureValue>XcLd5GFXVitha/9jqwoai0xVyWdLliijsf9YCAxpN2oUgv5rjyPtD1jT6uNuQWgYDII1xRINXxEVRsRVZff4vefC32VF/79fIUmHk08lpx4V0GYRSocMGZCOVevsnniUPxa7x6D8Cuv27FLYiscd4mZqN1a6iUKckFbHSurr8eJPXTzYLn2yCwwkV5Kt9MkoOLc0OraVpXzFNLBY/1QGowf4hCLgckhvwX5u1a8uTAPNMgDLT7UP9OQMrQAgS1jN41N4IdsF/KpQEdXv+dPev7vyJ2sPUuiF+PiCYNpDl/6Mgers1m/oOL8RNA/UrnOQ0b9tf64FxigXPMqGcnuyXQ==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIH7TCCBdWgAwIBAgIIQ9za7Zqaq8swDQYJKoZIhvcNAQELBQAwczELMAkGA1UEBhMCQlIxEzARBgNVBAoTCklDUC1CcmFzaWwxNjA0BgNVBAsTLVNlY3JldGFyaWEgZGEgUmVjZWl0YSBGZWRlcmFsIGRvIEJyYXNpbCAtIFJGQjEXMBUGA1UEAxMOQUMgU0FGRVdFQiBSRkIwHhcNMTcxMDEzMTQxNDQ2WhcNMTgxMDEzMTQxNDQ2WjCB3TELMAkGA1UEBhMCQlIxEzARBgNVBAoTCklDUC1CcmFzaWwxCzAJBgNVBAgTAlJTMRAwDgYDVQQHEwdFUkVDSElNMTYwNAYDVQQLEy1TZWNyZXRhcmlhIGRhIFJlY2VpdGEgRmVkZXJhbCBkbyBCcmFzaWwgLSBSRkIxFjAUBgNVBAsTDVJGQiBlLUNOUEogQTExEjAQBgNVBAsTCUFSIEZVVFVSQTE2MDQGA1UEAxMtTUVUQUxVUkdJQ0EgVkFMRU5USU5JIExUREEgRVBQOjkxMjQxMDM0MDAwMTIzMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuHP5Vr4kCP9IQ8MZzJ6qvfRjqLASd9UbijZBoOU9ve6caSt+ubIYBSZ3Y4b37GPbc6g4/vcY4sN/gZqEinqJHXPJgO0KCt6xTpW/2ci8donFw5ubDY/38P1jnWea1peRPBHewqyUIqvDp+r5clzDALrJlFipSpoKTAfaygf3weeVi3PdynMYWAMkG4wSWL6x1fzLFwbClRjewF6FN1htRR+TJHnvrd45q/8BWA2xy8zzWwrP+Un8tubk8ZD7VB5XsQpLxtJZhEm4l/SGZxjmUf2i+0WqkJ38PH80Ku9YACAvvllrg6wvcREwrP0XvlM49cj2rA2ghdcZZjxk5/o8CQIDAQABo4IDGDCCAxQwHwYDVR0jBBgwFoAU30VPT8fh3DjMSgwg5/jpWa0fXmEwDgYDVR0PAQH/BAQDAgXgMG0GA1UdIARmMGQwYgYGYEwBAgEzMFgwVgYIKwYBBQUHAgEWSmh0dHA6Ly9yZXBvc2l0b3Jpby5hY3NhZmV3ZWIuY29tLmJyL2FjLXNhZmV3ZWJyZmIvYWMtc2FmZXdlYi1yZmItcGMtYTEucGRmMIH/BgNVHR8EgfcwgfQwT6BNoEuGSWh0dHA6Ly9yZXBvc2l0b3Jpby5hY3NhZmV3ZWIuY29tLmJyL2FjLXNhZmV3ZWJyZmIvbGNyLWFjLXNhZmV3ZWJyZmJ2Mi5jcmwwUKBOoEyGSmh0dHA6Ly9yZXBvc2l0b3JpbzIuYWNzYWZld2ViLmNvbS5ici9hYy1zYWZld2VicmZiL2xjci1hYy1zYWZld2VicmZidjIuY3JsME+gTaBLhklodHRwOi8vYWNyZXBvc2l0b3Jpby5pY3BicmFzaWwuZ292LmJyL2xjci9TQUZFV0VCL2xjci1hYy1zYWZld2VicmZidjIuY3JsMIGLBggrBgEFBQcBAQR/MH0wUQYIKwYBBQUHMAKGRWh0dHA6Ly9yZXBvc2l0b3Jpby5hY3NhZmV3ZWIuY29tLmJyL2FjLXNhZmV3ZWJyZmIvYWMtc2FmZXdlYnJmYnYyLnA3YjAoBggrBgEFBQcwAYYcaHR0cDovL29jc3AuYWNzYWZld2ViLmNvbS5icjCBtwYDVR0RBIGvMIGsgRhWQUxFTlRJTklAQlJUVVJCTy5DT00uQlKgIgYFYEwBAwKgGRMXUk9CRVJUTyBDRVpBUiBWQUxFTlRJTkmgGQYFYEwBAwOgEBMOOTEyNDEwMzQwMDAxMjOgOAYFYEwBAwSgLxMtMTMwNDE5NTIxODAwNDgxNDAzNDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwoBcGBWBMAQMHoA4TDDAwMDAwMDAwMDAwMDAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUHAwQwCQYDVR0TBAIwADANBgkqhkiG9w0BAQsFAAOCAgEAAYDK6+EQ20zQ5WIpX2YqBMYVUUYAkRwaPLMMXc0DJYaOsRgOMgy1ETsK2Rhu72VRjdcvS0hPWJ/Q711WC2SB+d5BccSRpcu8V9JTT4NdGMj5uHO6gFW76LuTqmQ1DhaAqILAwQJiCGOXFVwZLC4RH6LUVmdKwOZxclzX0zbAvlUtd/OZHmClox2fX0i42lzZozzPwvuctoaq6GzJnGvIznJdnZ5W18EZGFYzbobCSJD50SlvArzZhHo3EkNhb1KJrh+dIqIAriI1DnWmnUlUXIgo8rORJlqknQdYPDHXyR+iuRyKdybmMzy2DvIkTVk12LuKBgThkLiCJdXoO7VowVIVdPUJIWuNbYmNzx7BxtNaITlrwa//3AwG98ALR97WQbuu8EHEvj6Dxvzt4mASQdpi+ZuuIcVj6aoxt6n5cS3oPIqajXCN+mfVRIqx1vD02AhJamU9UfaNGcVPgf3BURWOp3/7sL5s5QC2Ftjd1KSNMsO9XUmtY+cgAbPTLoINDg7zL2bc5ogU4naV7wYMTkJsNsLXDziLZehJOcRjGrIxohhb47oTMyb/LSh+i3y520U3CQ98SsM1TC0r15N/hi6wULk79Z3zDtKC1kPokcM6jf3dqcU5GABlkKMldpdaZ72MgkRtV3FK9pK2lgbQCVNTR1/psR+C9mRvDcK62Ss=</X509Certificate></X509Data></KeyInfo></Signature></NFe><protNFe versao=\\\"3.10\\\"><infProt><tpAmb>2</tpAmb><verAplic>RSnfce201712041453</verAplic><chNFe>43180191241034000123651010000011931000000250</chNFe><dhRecbto>2018-01-12T15:39:17-02:00</dhRecbto><nProt>143180000055376</nProt><digVal>mqVt21CRDNq0z08Sv8z//3DmZX0=</digVal><cStat>100</cStat><xMotivo>Autorizado o uso da NF-e</xMotivo></infProt></protNFe></nfeProc>\",\n\t\t\"xmlCanc\":\"\",\n\t\t\"codVend\":1,\n\t\t\"pedidoOrigem\":null,\n\t\t\"IdMovimento\":7,\n\t\t\"parcelas\":[{\n\t\t\t\"idPagto\": 13,\n\t\t\t\"valorParc\": 10,\n\t\t\t\"dataVenc\": \"27/04/2018\"\n\t\t}],\n\t\t\"pagamentos\":[{\n\t\t\t\"idPagto\":13,\n\t\t\t\"idNota\":25,\n\t\t\t\"codPagto\":\"01\",\n\t\t\t\"descPagto\":\"Dinheiro\",\n\t\t\t\"valorPagto\":10,\n\t\t\t\"trocoPagto\":0,\n\t\t\t\"prazo\":false\n\t\t}]\n\t}]\n}\n"
 						},
 						"url": {
-							"raw": "{{apiUrl}}/nfce/importar?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/nfce/importar?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"nfce",
 								"importar"
 							],
@@ -3123,11 +3207,12 @@
 							"raw": "{\n  \"data\": [\n    {\n      \"cai_cod\": 1,\n      \"cai_exc\": false,\n      \"cai_des\": \"Caixa numero 1\",\n      \"cai_dat_cad\": \"27/04/2018\"\n    }\n  ]\n}"
 						},
 						"url": {
-							"raw": "{{apiUrl}}/nfce/importar-caixas?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/nfce/importar-caixas?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"nfce",
 								"importar-caixas"
 							],
@@ -3148,11 +3233,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{apiUrl}}/nfce?emp={{emp}}-{{filial}}&access_token={{token}}",
+							"raw": "{{baseUrl}}/api/nfce?emp={{emp}}-{{filial}}&access_token={{token}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"nfce"
 							],
 							"query": [
@@ -3182,11 +3268,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/nfce/get-by-titulo-serie?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/nfce/get-by-titulo-serie?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"nfce",
 								"get-by-titulo-serie"
 							],
@@ -3216,11 +3303,12 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{apiUrl}}/nfce/cancelar-by-titulo-serie?emp={{emp}}-{{filial}}&serie=2&titulo=1",
+							"raw": "{{baseUrl}}/api/nfce/cancelar-by-titulo-serie?emp={{emp}}-{{filial}}&serie=2&titulo=1",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"nfce",
 								"cancelar-by-titulo-serie"
 							],
@@ -3254,11 +3342,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/nfce/backup?emp={{emp}}-{{filial}}&caixa=1&modelo=01",
+							"raw": "{{baseUrl}}/api/nfce/backup?emp={{emp}}-{{filial}}&caixa=1&modelo=01",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"nfce",
 								"backup"
 							],
@@ -3300,11 +3389,12 @@
 							"raw": "{\n  \"data\": [\n    {\n    \t\"IdMovimento\": 1,\n    \t\"idCaixa\": 1,\n\t\t\"CodOperador\": 1,\n\t\t\"DataAberturaMovimento\": \"27/04/2018\",\n\t\t\"HoraAberturaMovimento\": \"10:00:00\",\n\t\t\"DataFechamentoMovimento\": \"27/04/2018\",\n\t\t\"HoraFechamentoMovimento\": \"19:00:00\",\n\t\t\"ObsMovimento\": \"Caixa numero 1\",\n\t\t\"StatusMovimento\": \"F\"\n    },\n    {\n    \t\"IdMovimento\": 2,\n\t\t\"idCaixa\": 2,\n\t\t\"CodOperador\": 50,\n\t\t\"DataAberturaMovimento\": \"27/04/2018\",\n\t\t\"HoraAberturaMovimento\": \"07:40:00\",\n\t\t\"DataFechamentoMovimento\": \"\",\n\t\t\"HoraFechamentoMovimento\": \"\",\n\t\t\"ObsMovimento\": \"Caixa numero 2\",\n\t\t\"StatusMovimento\": \"A\"\n    }\n  ]\n}"
 						},
 						"url": {
-							"raw": "{{apiUrl}}/nfce-movimentos/importar?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/nfce-movimentos/importar?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"nfce-movimentos",
 								"importar"
 							],
@@ -3338,11 +3428,12 @@
 							"raw": "{\n\t\"data\": [\n\t  {\n\t\t\"idSangria\":1,\n\t\t\"dataSangria\":\"11/11/2017\",\n\t\t\"horaSangria\":\"10:07:25\",\n\t\t\"valorSangria\":2.45,\n\t\t\"idMovimento\":1,\n\t\t\"obsSangria\":\"\",\n\t\t\"caixa\":6\n\t  }\n\t]\n}"
 						},
 						"url": {
-							"raw": "{{apiUrl}}/nfce-sangria-suprimento/importar-sangria?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/nfce-sangria-suprimento/importar-sangria?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"nfce-sangria-suprimento",
 								"importar-sangria"
 							],
@@ -3376,11 +3467,12 @@
 							"raw": "{\n\t\"data\": [\n\t  {\n\t\t\"idSuprimento\":1,\n\t\t\"dataSuprimento\":\"11/11/2017\",\n\t\t\"horaSuprimento\":\"10:07:25\",\n\t\t\"valorSuprimento\":2.45,\n\t\t\"idMovimento\":1,\n\t\t\"obsSuprimento\":\"\",\n\t\t\"caixa\":6\n\t  }\n\t]\n}"
 						},
 						"url": {
-							"raw": "{{apiUrl}}/nfce-sangria-suprimento/importar-suprimento?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/nfce-sangria-suprimento/importar-suprimento?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"nfce-sangria-suprimento",
 								"importar-suprimento"
 							],
@@ -3416,11 +3508,12 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{apiUrl}}/nfse/importar?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/nfse/importar?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"nfse",
 								"importar"
 							],
@@ -3446,11 +3539,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/notas-saidas?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/notas-saidas?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"notas-saidas"
 							],
 							"query": [
@@ -3475,11 +3569,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/notas-saidas/get-faturamento?emp={{emp}}&dataInicial=01/08/2020&dataFinal=20/09/2020",
+							"raw": "{{baseUrl}}/api/notas-saidas/get-faturamento?emp={{emp}}&dataInicial=01/08/2020&dataFinal=20/09/2020",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"notas-saidas",
 								"get-faturamento"
 							],
@@ -3513,11 +3608,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/os?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/os?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"os"
 							],
 							"query": [
@@ -3542,11 +3638,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/os/all?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/os/all?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"os",
 								"all"
 							],
@@ -3580,11 +3677,12 @@
 							"raw": "{\n\t\"data\": [{\n\t\t\"id\": 1,\n\t\t\"dataEmissao\": \"13:03:2018 13:30:00\",\n\t\t\"descricao\": \"troca de mercadorias\",\n\t\t\"cliente\": 1,\n\t\t\"credito\": \"S\",\n\t\t\"idMovimento\": 10,\n\t\t\"valor\": 100.00,\n\t\t\"movimento\":{\n\t\t\t\"idCaixa\": 1,\n\t\t\t\"idMovimento\": 10,\n\t\t\t\"codOperador\": 7,\n\t\t\t\"DataAberturaMovimento\": \"03/01/2018\",\n\t\t\t\"HoraAberturaMovimento\": \"17:32:31\",\n\t\t\t\"DataFechamentoMovimento\": \"\",\n\t\t\t\"HoraFechamentoMovimento\": \"\",\n\t\t\t\"StatusMovimento\": \"A\",\n\t\t\t\"obsMovimento\": \"\"\n\t\t}\n\t}]\n}\n"
 						},
 						"url": {
-							"raw": "{{apiUrl}}/troca/importar?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/troca/importar?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"troca",
 								"importar"
 							],
@@ -3616,11 +3714,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/pagamentos-formas?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/pagamentos-formas?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"pagamentos-formas"
 							],
 							"query": [
@@ -3645,11 +3744,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/pagamentos-formas/all?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/pagamentos-formas/all?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"pagamentos-formas",
 								"all"
 							],
@@ -3675,11 +3775,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/pagamentos-tipos?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/pagamentos-tipos?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"pagamentos-tipos"
 							],
 							"query": [
@@ -3704,11 +3805,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/pagamentos-tipos/all?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/pagamentos-tipos/all?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"pagamentos-tipos",
 								"all"
 							],
@@ -3742,11 +3844,12 @@
 							"raw": "[\n    {\n        \"id\": \"-LS_KavJcUmZbcLpbwa8\",\n        \"emissao\": \"30/11/2018 13:57:03\",\n        \"cliente\": 2,\n        \"serieModelo\": \"010-01\",\n        \"cfop\": 5152,\n        \"tabelaContabil\": null,\n        \"usuario\": 2700,\n        \"vendedor\": 3,\n        \"pagamentoForma\": null,\n        \"pagamentoTipo\": null,\n        \"pagamentoCondicao\": 1,\n        \"freteTipo\": 4,\n        \"observacoes\": null,\n        \"itens\": [\n            {\n                \"codigo\": \"-LS_L5_EiDN-A8RyQ3Vt\",\n                \"quantidade\": 2,\n                \"valor\": 59.9,\n                \"valorUnitario\": 59.9,\n                \"valorOriginal\": 104.17,\n                \"total\": 119.8,\n                \"desconto\": 0,\n                \"produto\": 77\n            }\n        ]\n    },\n    {\n        \"id\": \"-LS_KpKpCkYt_JGqWJH-\",\n        \"emissao\": \"30/11/2018 13:58:02\",\n        \"cliente\": 6,\n        \"serieModelo\": \"010-01\",\n        \"cfop\": 6102,\n        \"tabelaContabil\": 13,\n        \"usuario\": 2700,\n        \"vendedor\": 3,\n        \"pagamentoForma\": 6,\n        \"pagamentoTipo\": 6,\n        \"pagamentoCondicao\": 1,\n        \"freteTipo\": 4,\n        \"observacoes\": null,\n        \"itens\": [\n            {\n                \"codigo\": \"-LS_LBp2Ot3P-ZUdzdln\",\n                \"quantidade\": 5,\n                \"valor\": 120,\n                \"valorUnitario\": 109.89999999999999,\n                \"valorOriginal\": 104.17,\n                \"total\": 549.5,\n                \"desconto\": 50.50000000000003,\n                \"produto\": 77\n            },\n            {\n                \"codigo\": \"-LS_LLe_b9wrwR9IlIOS\",\n                \"quantidade\": 25,\n                \"valor\": 15,\n                \"valorUnitario\": 13.8,\n                \"valorOriginal\": 10,\n                \"total\": 345,\n                \"desconto\": 30,\n                \"produto\": 87\n            }\n        ]\n    },\n    {\n        \"id\": \"-LS_LgDlE9Y-H9H7chya\",\n        \"emissao\": \"30/11/2018 14:01:47\",\n        \"cliente\": 82,\n        \"serieModelo\": \"010-01\",\n        \"cfop\": 6102,\n        \"tabelaContabil\": 13,\n        \"usuario\": 2700,\n        \"vendedor\": 3,\n        \"pagamentoForma\": 1,\n        \"pagamentoTipo\": 6,\n        \"pagamentoCondicao\": 0,\n        \"freteTipo\": 4,\n        \"observacoes\": \"Pedido teste\",\n        \"itens\": [\n            {\n                \"codigo\": \"-LS_LqvMeiIZan_JVe4e\",\n                \"quantidade\": 2,\n                \"valor\": 163.8,\n                \"valorUnitario\": 150,\n                \"valorOriginal\": 163.8,\n                \"total\": 300,\n                \"desconto\": 27.600000000000044,\n                \"produto\": 57\n            }\n        ]\n    }\n]"
 						},
 						"url": {
-							"raw": "{{apiUrl}}/pedidos-saidas/importar?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/pedidos-saidas/importar?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"pedidos-saidas",
 								"importar"
 							],
@@ -3772,11 +3875,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/pedidos-saidas?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/pedidos-saidas?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"pedidos-saidas"
 							],
 							"query": [
@@ -3801,11 +3905,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/pedidos-saidas/calcular-impostos?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/pedidos-saidas/calcular-impostos?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"pedidos-saidas",
 								"calcular-impostos"
 							],
@@ -3831,11 +3936,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/pedidos-saidas/validar-desconto-maximo?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/pedidos-saidas/validar-desconto-maximo?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"pedidos-saidas",
 								"validar-desconto-maximo"
 							],
@@ -3855,7 +3961,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "7e517b03-5901-4b74-8fa3-8877658985c6",
+						"id": "ce146776-f455-46c9-8bb4-0209ad79a979",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -3865,7 +3971,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "b94b5853-7c0b-4faa-9f35-61b728d337cc",
+						"id": "970d5784-ceee-447a-a41e-82b70fd96c49",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -3889,11 +3995,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/plano-contas?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/plano-contas?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"plano-contas"
 							],
 							"query": [
@@ -3918,11 +4025,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/plano-contas/all?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/plano-contas/all?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"plano-contas",
 								"all"
 							],
@@ -3962,11 +4070,12 @@
 							"raw": "{\n    \"data\": [\n        {\n            \"rota\": 1,\n\t\t\t\"vendedor\": 1,\n\t\t\t\"dataIni\": \"13/03/2018 13:30:00\",\n\t\t\t\"dataEnd\": \"13/03/2018 18:00:00\",\n\t\t\t\"visitas\": [\n\t\t\t\t{\n\t\t\t\t\t\"cliente\": 1,\n\t\t\t\t\t\"pedidos\": [\n\t\t\t\t\t\t1, \n\t\t\t\t\t\t2\n\t\t\t\t\t]\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"cliente\": 2,\n\t\t\t\t\t\"pedidos\": [3]\n\t\t\t\t}\n        \t]\n        }\n    ]\n}"
 						},
 						"url": {
-							"raw": "{{apiUrl}}/rotas/importar-visitas?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/rotas/importar-visitas?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"rotas",
 								"importar-visitas"
 							],
@@ -3992,11 +4101,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/rotas?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/rotas?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"rotas"
 							],
 							"query": [
@@ -4016,11 +4126,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{apiUrl}}/rotas/all?emp={{emp}}-{{filial}}&access_token={{token}}",
+							"raw": "{{baseUrl}}/api/rotas/all?emp={{emp}}-{{filial}}&access_token={{token}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"rotas",
 								"all"
 							],
@@ -4044,7 +4155,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "23de0ac7-fc9b-47ee-874a-1710a68de5e6",
+						"id": "9afee107-1fc2-4b32-9abd-57e6ab81dfc4",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -4054,7 +4165,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "6d48e6c3-c0d6-4d57-a79c-7f3ccc3318ee",
+						"id": "9b669e72-da49-4fe5-8d8b-a5aa7545fb95",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -4078,11 +4189,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/scanntech/promocoes?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/scanntech/promocoes?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"scanntech",
 								"promocoes"
 							],
@@ -4108,11 +4220,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/scanntech/promocoes-all?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/scanntech/promocoes-all?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"scanntech",
 								"promocoes-all"
 							],
@@ -4144,11 +4257,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/server/gettime",
+							"raw": "{{baseUrl}}/api/server/gettime",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"server",
 								"gettime"
 							]
@@ -4168,11 +4282,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/usuarios?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/usuarios?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"usuarios"
 							],
 							"query": [
@@ -4204,11 +4319,12 @@
 							"urlencoded": []
 						},
 						"url": {
-							"raw": "{{apiUrl}}/usuarios/me?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/usuarios/me?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"usuarios",
 								"me"
 							],
@@ -4234,11 +4350,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/usuarios/login?emp={{emp}}&empresa=440&filial=1&user=5812&password=zetta1",
+							"raw": "{{baseUrl}}/api/usuarios/login?emp={{emp}}&empresa=440&filial=1&user=5812&password=zetta1",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"usuarios",
 								"login"
 							],
@@ -4280,11 +4397,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/usuarios/login-simple?emp={{emp}}&user=5812&password=zetta1",
+							"raw": "{{baseUrl}}/api/usuarios/login-simple?emp={{emp}}&user=5812&password=zetta1",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"usuarios",
 								"login-simple"
 							],
@@ -4318,11 +4436,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/usuarios/petshops?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/usuarios/petshops?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"usuarios",
 								"petshops"
 							],
@@ -4348,11 +4467,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/usuarios/drsnoopy-oauth?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/usuarios/drsnoopy-oauth?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"usuarios",
 								"drsnoopy-oauth"
 							],
@@ -4378,11 +4498,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/usuarios/empresas?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/usuarios/empresas?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"usuarios",
 								"empresas"
 							],
@@ -4402,7 +4523,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "cfa030bb-233b-415e-bd2a-d33fcf558c18",
+						"id": "13757529-0194-489d-9db7-d26c079fff7a",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -4412,7 +4533,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "363ac453-838a-4e5b-86b9-1e1d67dea25c",
+						"id": "5342a328-23a9-46fc-9650-af78bec4f68c",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -4436,11 +4557,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/tabelas-contabeis?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/tabelas-contabeis?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"tabelas-contabeis"
 							],
 							"query": [
@@ -4465,11 +4587,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/tabelas-contabeis/all?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/tabelas-contabeis/all?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"tabelas-contabeis",
 								"all"
 							],
@@ -4495,11 +4618,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/tabelas-precos?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/tabelas-precos?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"tabelas-precos"
 							],
 							"query": [
@@ -4524,11 +4648,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/tabelas-precos/all?emp={{emp}}&access_token={{token}}",
+							"raw": "{{baseUrl}}/api/tabelas-precos/all?emp={{emp}}&access_token={{token}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"tabelas-precos",
 								"all"
 							],
@@ -4566,11 +4691,12 @@
 							"raw": "{\n\t\"data\": [\n\t    {\n\t        \"id\": 8,\n\t        \"datahora\": \"30/11/2018 13:57:03\",\n\t        \"usuario\": 3000,\n\t        \"descricao\": \"A vista\",\n\t        \"percentual\": 10.00,\n\t        \"padrao\": false,\n\t        \"condicaoPrazo\": false,\n\t        \"itens\": [\n\t            {\n\t                \"id\": 1,\n\t                \"usuario\": 3000,\n\t                \"manual\": false,\n\t                \"valor\": 90.00,\n\t                \"item\": 25\n\t            }\n\t        ]\n\t    },\n\t    {\n\t        \"id\": 9,\n\t        \"datahora\": \"30/11/2018 13:57:03\",\n\t        \"usuario\": 3000,\n\t        \"descricao\": \"A prazo\",\n\t        \"percentual\": -10.00,\n\t        \"padrao\": false,\n\t        \"condicaoPrazo\": true,\n\t        \"itens\": [\n\t            {\n\t                \"id\": 1,\n\t                \"usuario\": 3000,\n\t                \"manual\": false,\n\t                \"valor\": 110.00,\n\t                \"item\": 25\n\t            }\n\t        ]\n\t    }\n\t]\n}"
 						},
 						"url": {
-							"raw": "{{apiUrl}}/tabelas-precos/importar?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/tabelas-precos/importar?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"tabelas-precos",
 								"importar"
 							],
@@ -4590,7 +4716,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "8baf16db-f333-4ed8-9c14-8925f1629a35",
+						"id": "ac406870-a73c-4de1-be7c-a1d1a483e0d1",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -4600,7 +4726,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "db081f77-687f-4dcb-b56e-c6b96b9f39e7",
+						"id": "ee1cb9f8-234e-4b4b-933f-d79905c42e18",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -4624,11 +4750,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/titulos/excluidos?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/titulos/excluidos?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"titulos",
 								"excluidos"
 							],
@@ -4654,11 +4781,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/titulos?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/titulos?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"titulos"
 							],
 							"query": [
@@ -4683,11 +4811,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/titulos/titulos?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/titulos/titulos?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"titulos",
 								"titulos"
 							],
@@ -4713,11 +4842,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/titulos/exportar-remessas?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/titulos/exportar-remessas?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"titulos",
 								"exportar-remessas"
 							],
@@ -4743,11 +4873,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/titulos/calcular?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/titulos/calcular?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"titulos",
 								"calcular"
 							],
@@ -4773,11 +4904,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/titulos/baixar-titulos?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/titulos/baixar-titulos?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"titulos",
 								"baixar-titulos"
 							],
@@ -4807,11 +4939,12 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{apiUrl}}/titulos/concluir-baixas-banco?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/titulos/concluir-baixas-banco?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"titulos",
 								"concluir-baixas-banco"
 							],
@@ -4847,11 +4980,12 @@
 							]
 						},
 						"url": {
-							"raw": "{{apiUrl}}/titulos/set-boletos?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/titulos/set-boletos?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"titulos",
 								"set-boletos"
 							],
@@ -4887,11 +5021,12 @@
 							]
 						},
 						"url": {
-							"raw": "{{apiUrl}}/titulos/set-boletos?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/titulos/set-boletos?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"titulos",
 								"set-boletos"
 							],
@@ -4917,11 +5052,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/titulos-delta-z4?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/titulos-delta-z4?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"titulos-delta-z4"
 							],
 							"query": [
@@ -4946,11 +5082,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/titulos-delta-z4/get-pagos?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/titulos-delta-z4/get-pagos?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"titulos-delta-z4",
 								"get-pagos"
 							],
@@ -4980,11 +5117,12 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{apiUrl}}/titulos-delta-z4/estornar?emp={{emp}}-{{filial}}",
+							"raw": "{{baseUrl}}/api/titulos-delta-z4/estornar?emp={{emp}}-{{filial}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"titulos-delta-z4",
 								"estornar"
 							],
@@ -5016,11 +5154,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/vendedores?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/vendedores?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"vendedores"
 							],
 							"query": [
@@ -5045,11 +5184,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/vendedores/all?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/vendedores/all?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"vendedores",
 								"all"
 							],
@@ -5081,11 +5221,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/webpush/subscribe?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/webpush/subscribe?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"webpush",
 								"subscribe"
 							],
@@ -5111,11 +5252,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/webpush/public-key?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/webpush/public-key?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"webpush",
 								"public-key"
 							],
@@ -5145,11 +5287,12 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{apiUrl}}/webpush/send-notificacao?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/webpush/send-notificacao?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"webpush",
 								"send-notificacao"
 							],
@@ -5175,11 +5318,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/widgets/contas-pagar-pendentes?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/widgets/contas-pagar-pendentes?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"widgets",
 								"contas-pagar-pendentes"
 							],
@@ -5205,11 +5349,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/widgets/contas-receber-pendentes?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/widgets/contas-receber-pendentes?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"widgets",
 								"contas-receber-pendentes"
 							],
@@ -5235,11 +5380,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/widgets/contas-receber-pendentes-mensal?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/widgets/contas-receber-pendentes-mensal?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"widgets",
 								"contas-receber-pendentes-mensal"
 							],
@@ -5265,11 +5411,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/widgets/contas-pagar-pendentes-mensal?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/widgets/contas-pagar-pendentes-mensal?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"widgets",
 								"contas-pagar-pendentes-mensal"
 							],
@@ -5295,11 +5442,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/widgets/animais-racas?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/widgets/animais-racas?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"widgets",
 								"animais-racas"
 							],
@@ -5325,11 +5473,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/widgets/pet-shop-tarefas?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/widgets/pet-shop-tarefas?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"widgets",
 								"pet-shop-tarefas"
 							],
@@ -5355,11 +5504,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/widgets/metas?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/widgets/metas?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"widgets",
 								"metas"
 							],
@@ -5385,11 +5535,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/widgets/ranking-clientes-vendas?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/widgets/ranking-clientes-vendas?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"widgets",
 								"ranking-clientes-vendas"
 							],
@@ -5415,11 +5566,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/widgets/ranking-produtos-vendas?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/widgets/ranking-produtos-vendas?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"widgets",
 								"ranking-produtos-vendas"
 							],
@@ -5445,11 +5597,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/widgets/ranking-maior-menor-custo?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/widgets/ranking-maior-menor-custo?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"widgets",
 								"ranking-maior-menor-custo"
 							],
@@ -5475,11 +5628,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/widgets/ranking-maior-menor-preco-venda?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/widgets/ranking-maior-menor-preco-venda?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"widgets",
 								"ranking-maior-menor-preco-venda"
 							],
@@ -5505,11 +5659,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/zmobile/get-versao?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/zmobile/get-versao?emp={{emp}}",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"zmobile",
 								"get-versao"
 							],
@@ -5535,11 +5690,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/zmobile/get-dados?emp={{emp}}&usuario=10",
+							"raw": "{{baseUrl}}/api/zmobile/get-dados?emp={{emp}}&usuario=10",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"zmobile",
 								"get-dados"
 							],
@@ -5569,11 +5725,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/zmobile/set-dados?emp={{emp}}&usuario=5812",
+							"raw": "{{baseUrl}}/api/zmobile/set-dados?emp={{emp}}&usuario=5812",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"zmobile",
 								"set-dados"
 							],
@@ -5603,11 +5760,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/zmobile/backup?emp={{emp}}&backup=1",
+							"raw": "{{baseUrl}}/api/zmobile/backup?emp={{emp}}&backup=1",
 							"host": [
-								"{{apiUrl}}"
+								"{{baseUrl}}"
 							],
 							"path": [
+								"api",
 								"zmobile",
 								"backup"
 							],
@@ -5631,7 +5789,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "a8c1d75a-a4bc-4d55-8d0b-da91fc171915",
+						"id": "93228eb4-5100-47f3-b22b-ea323c5af5f8",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -5641,7 +5799,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "ee3ae6c2-0795-48a5-8d6a-5c4ee8dd6597",
+						"id": "69953ec2-fb37-47c0-b1d9-f62fec482fd1",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -5656,7 +5814,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "5da957ff-7956-434d-9969-5ba98f5fafdf",
+				"id": "39618bd7-c1c9-4435-8fd3-87ab5a2e5546",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -5666,7 +5824,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "29b9e4ed-d0c4-4d1e-8959-0b92c830c64d",
+				"id": "34abb313-0ef7-45c0-8092-9ed38ddf74a8",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -5676,44 +5834,39 @@
 	],
 	"variable": [
 		{
-			"id": "cc819f7e-b3de-4522-8ff1-30dfc7aa4f74",
+			"id": "83259996-3cf6-4a95-9fcb-31604955fec8",
 			"key": "baseUrl",
-			"value": "https://sistema.zettabrasil.com.br/siggma"
+			"value": "Link acesso ao Sistema"
 		},
 		{
-			"id": "a2104098-6986-48b0-ba34-82be7055cf56",
-			"key": "apiUrl",
-			"value": "https://sistema.zettabrasil.com.br/siggma/api"
-		},
-		{
-			"id": "5a9e474b-fdb8-4186-b85b-2e4b83aa3655",
+			"id": "07b6771c-5998-4d99-a4d0-115fe72e9327",
 			"key": "emp",
-			"value": "440"
+			"value": "Cod. Empresa"
 		},
 		{
-			"id": "d83ead77-c2d5-433b-bdc2-c22694527197",
+			"id": "bbf9fba7-1a2a-47f8-9363-877ca80cd2df",
 			"key": "filial",
-			"value": "1"
+			"value": "N° Filial"
 		},
 		{
-			"id": "5e7dbd24-ce37-4d3e-892a-29263b98a1c0",
+			"id": "cf7845ef-3718-4da1-99c6-54259d8af0c9",
 			"key": "userAuth",
-			"value": "zetta-testes"
+			"value": "User Api (manter)"
 		},
 		{
-			"id": "5ec98b1b-77aa-422f-ba62-dbf5e6affc52",
+			"id": "3ff05d7d-5ae9-499a-9c74-68922d22eccb",
 			"key": "pwdAuth",
-			"value": "wu4%3w0&9"
+			"value": "Senha Api (manter)"
 		},
 		{
-			"id": "c8c79bbd-b6e5-4071-831d-b51ea5bb1084",
+			"id": "54d738d9-2c0f-42df-adcb-e840655ba7b2",
 			"key": "userSiggma",
-			"value": "USUARIO"
+			"value": "Usuário no SIggma"
 		},
 		{
-			"id": "762d7263-750c-461d-9c83-5f8e46ad7be5",
+			"id": "8f5bacb2-2f42-4dbb-b855-b1fdab2d66f5",
 			"key": "pwdSiggma",
-			"value": "MD5 DA SENHA"
+			"value": "Senha MD5 (solicitar zetta)"
 		}
 	],
 	"protocolProfileBehavior": {}
