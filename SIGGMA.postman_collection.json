@@ -1,8 +1,8 @@
 {
 	"info": {
-		"_postman_id": "f788e844-fd2b-4eb9-b643-ead828e03f7d",
+		"_postman_id": "14ff551e-2102-4aa6-b48b-781cc5830994",
 		"name": "SIGGMA",
-		"description": "Complemento para compreensão das variáveis:\n\nbaseUrl - Contém o endereço para acesso ao sistema e APIs, deve ser configurada com a URL disponível ao efetuar o login no sistema siggma, para TESTES, pode ser mantida. \nemp - Deve ser configurada com o código da empresa, número presente a esquerda da razão social.\nfilial - Permite a configuração do código da filial, se faz presente ao lado direito superior do sistema, a esquerda dos módulos (caso tenha apenas um, pode ser preenchido com 1).\nuserAuth - Usuário de acesso as APIs, pode ser mantido o 'zetta-testes' (testes/produção).\npwdAuth - Senha de acesso as APIs, pode ser mantido 'wu4%3w0&9' (testes/produção).\nuserSiggma - Usuário de acesso ao sistema Siggma, para TESTES pode ser utilizado o zettaapis.\npwdSiggma - Senha de acesso ao sistema Siggma, deve ser em hash MD5, logo deve ser solicitada a equipe Zetta Brasil, para testes, as configurações podem ser mantidas.\n\n\n",
+		"description": "Complemento para compreensão das variáveis:\n\nbaseUrl - Contém o endereço para acesso ao sistema e APIs, deve ser configurada com a URL disponível ao efetuar o login no sistema siggma, para TESTES, pode ser mantida. \n\nemp - Deve ser configurada com o código da empresa, número presente a esquerda da razão social.\n\nfilial - Permite a configuração do código da filial, se faz presente ao lado superior direito do sistema, a esquerda dos módulos (caso tenha apenas um, pode ser preenchido com 1).\n\nuserAuth - Usuário de acesso as APIs, deve ser preenchido com o fornecido no e-mail de solicitação.\n\npwdAuth - Senha de acesso as APIs, deve ser preenchida com a fornecida no e-mail de solicitação.\n\nuserSiggma - Usuário de acesso ao sistema Siggma, para TESTES pode ser utilizado o 'zettaapis'.\n\npwdSiggma - Senha de acesso ao sistema Siggma, deve ser em hash MD5, logo deve ser solicitada a equipe Zetta Brasil, para testes, as configurações podem ser mantidas.\n\n\n",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -15,7 +15,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "e345925e-55fc-48a1-bfd2-4a321d25babe",
+								"id": "dce1237f-256c-4caf-a72f-f71bda8f84d8",
 								"exec": [
 									"pm.environment.set(\"token\", pm.response.json().access_token);"
 								],
@@ -126,7 +126,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "5b4d1ff5-9ce3-4368-a5e0-6e12af054d33",
+								"id": "54c2fbab-e4b1-4ace-a514-850f87d4b8d4",
 								"exec": [
 									"pm.environment.set(\"usuario\", pm.response.json().data);"
 								],
@@ -344,7 +344,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "17806307-4633-4602-85fa-6caeac2052c5",
+						"id": "b8d7a39c-9ee1-48e5-9c66-d1f968a7517d",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -354,7 +354,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "7f993467-f08b-4d59-a643-7a48bf04dc73",
+						"id": "69a1a539-fbbb-44ac-be14-6606e52ea88a",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1474,7 +1474,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "3b821877-02a3-4036-9b8f-09f1fc9b9d76",
+						"id": "ea31367d-89ee-48aa-a00f-3000622074b4",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1484,7 +1484,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "08282e57-5e52-43d4-9e22-a213e062adcf",
+						"id": "452b9c4d-2e10-45cf-bcda-3b20bdcd45d6",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1763,7 +1763,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "ee1d991d-de56-4fec-9b59-0f05a5eace1a",
+						"id": "b9b45bb7-0ad4-42b3-8660-065f99d43aee",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1773,7 +1773,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "6e87d837-bd0b-43dd-bfd3-b9fcd558b529",
+						"id": "47ce28ce-a2a4-44c3-97c7-db50c3f412c4",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -2143,7 +2143,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "24964928-10d9-4e06-98cd-41a659ede0bd",
+						"id": "3e1e1b32-b576-4153-855b-3ce42252d8c8",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -2153,7 +2153,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "73f665d1-8ee0-48c1-8e88-017a8e7a8a4f",
+						"id": "5001fc71-01e2-4f64-b410-a5a72d6343f4",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -2414,7 +2414,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "5bf924e0-e334-4375-b564-01d1f2777520",
+								"id": "27a30407-552d-4e8e-90a2-ba9ddf3fecca",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -2424,7 +2424,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "c90dcf11-f99b-44e1-9743-0eb1eaee9c7f",
+								"id": "0d20eab2-98a1-4104-923f-094a4f66070e",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -3962,7 +3962,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "98792b53-adec-4d1b-ade8-4d2aaf051432",
+						"id": "5f272688-aea0-47b6-8231-ec639880a22c",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -3972,7 +3972,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "96c0f44c-445f-4296-8795-e0275dbfeae4",
+						"id": "ad26bb9d-58af-45ff-83ca-02ef041f6bca",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -4102,7 +4102,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/api/rotas?emp={{emp}}",
+							"raw": "{{baseUrl}}/api/rotas?emp={{emp}}&colaborador=3",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -4114,6 +4114,10 @@
 								{
 									"key": "emp",
 									"value": "{{emp}}"
+								},
+								{
+									"key": "colaborador",
+									"value": "3"
 								}
 							]
 						},
@@ -4156,7 +4160,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "3ebcb5bd-99df-4704-bc86-60011033eced",
+						"id": "32f4c5d2-bf08-454c-ad93-d160ac629175",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -4166,7 +4170,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "bedd4ad3-fea4-4ca1-b936-0c5ec8555a40",
+						"id": "61d9d060-2a1d-44dd-91ad-d4d8c57f1faa",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -4524,7 +4528,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "de8bf8a2-3429-4e02-bd80-12e7e62588ed",
+						"id": "e61d655b-50df-4003-b3a4-95bb94d29021",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -4534,7 +4538,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "118c6b7d-ac9f-41e1-a42a-24461b2876ee",
+						"id": "d64f5597-15db-4994-b73a-a48e24d38b61",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -4717,7 +4721,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "a6e909f3-6455-45b7-a8bb-b673a550906f",
+						"id": "ba08b70d-5523-42ee-9a0e-97ad4bb029d0",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -4727,7 +4731,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "6e679832-6c53-4215-9479-338425426e2e",
+						"id": "2fe90aa1-0826-4e98-a815-970279143d7f",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -5790,7 +5794,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "ac6c4085-8f14-40ab-b955-eb53cf679625",
+						"id": "62e60a54-6ab2-4e7d-b145-2fe714d88ae7",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -5800,7 +5804,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "4c0828cf-5c69-48cd-b260-46ffd6079abd",
+						"id": "45708d50-8456-4521-baae-8eabde0a3140",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -5815,7 +5819,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "81348b66-3de3-4974-9621-3257e31116cb",
+				"id": "188029b7-176b-4804-bb5d-b9abc02c0e9e",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -5825,7 +5829,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "4a5b68d7-707a-4566-9f7b-7d56fef8c50f",
+				"id": "b926a71f-dfae-4072-8efd-bafa5ede4172",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -5835,37 +5839,37 @@
 	],
 	"variable": [
 		{
-			"id": "88de919e-2f9c-477f-a29c-8228c681d36b",
+			"id": "8211a9ac-db58-4f33-8405-857ebdc1760f",
 			"key": "baseUrl",
 			"value": "https://sistema.zettabrasil.com.br/siggma-integracoesapis"
 		},
 		{
-			"id": "59fe6a7d-50b4-4927-acf9-a2cd4103815b",
+			"id": "da8a4563-06a9-45a0-a564-d2834114828f",
 			"key": "emp",
 			"value": "103"
 		},
 		{
-			"id": "00925a14-8014-484e-aa21-88d9b0bbcc4e",
+			"id": "b8418641-22a7-4a3e-98a0-5027debe01fc",
 			"key": "filial",
 			"value": "1"
 		},
 		{
-			"id": "fd69ae1e-4d2f-4ea6-9906-5e24ed9c10c7",
+			"id": "6dbcea2a-b895-4463-a9ec-cb6e0b289547",
 			"key": "userAuth",
-			"value": "zetta-testes"
+			"value": "UsuarioAPI"
 		},
 		{
-			"id": "7439af2e-52bf-43a5-8308-222d4ffa0d59",
+			"id": "f3bb5aa7-529e-48a9-ad1b-7a554f6b029c",
 			"key": "pwdAuth",
-			"value": "wu4%3w0&9"
+			"value": "SenhaUsuarioAPI"
 		},
 		{
-			"id": "ee380f35-1930-4215-84aa-70be2633c7a9",
+			"id": "5006a96a-f99e-4caf-bb50-c5001535fe73",
 			"key": "userSiggma",
 			"value": "zettaapis"
 		},
 		{
-			"id": "22c85fa9-aaaf-4c8e-bb46-c34cdc8965e0",
+			"id": "e97b626b-7fe9-40bb-8146-8a775e5433cc",
 			"key": "pwdSiggma",
 			"value": "fa73005595f01df706b4e6363cb191af3e45c8b94696ed9664280b558b3395cb"
 		}
