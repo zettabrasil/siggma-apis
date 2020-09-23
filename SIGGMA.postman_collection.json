@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "d1bddcdc-9066-42b4-a61d-4de2f70a1cc1",
+		"_postman_id": "5ecf0830-6c53-468f-be87-a59aebeb1e0d",
 		"name": "SIGGMA",
 		"description": "Complemento para compreensão das variáveis:\n\nbaseUrl - Contém o endereço para acesso ao sistema e APIs, deve ser configurada com a URL disponível ao efetuar o login no sistema siggma, para TESTES, pode ser mantida. \n\nemp - Deve ser configurada com o código da empresa, número presente a esquerda da razão social.\n\nfilial - Permite a configuração do código da filial, se faz presente ao lado superior direito do sistema, a esquerda dos módulos (caso tenha apenas um, pode ser preenchido com 1).\n\nuserAuth - Usuário de acesso as APIs, deve ser preenchido com o fornecido no e-mail de solicitação.\n\npwdAuth - Senha de acesso as APIs, deve ser preenchida com a fornecida no e-mail de solicitação.\n\nuserSiggma - Usuário de acesso ao sistema Siggma, para TESTES pode ser utilizado o 'zettaapis'.\n\npwdSiggma - Senha de acesso ao sistema Siggma, deve ser em hash MD5, logo deve ser solicitada a equipe Zetta Brasil, para testes, as configurações podem ser mantidas.\n\n\n",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -15,7 +15,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "4340fa6c-c211-4c52-8443-e0378ea1db4a",
+								"id": "a4f93154-e857-46eb-ad7f-a555b9829707",
 								"exec": [
 									"pm.environment.set(\"token\", pm.response.json().access_token);"
 								],
@@ -126,7 +126,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "0afe5b91-7ed7-4d05-8b28-999e6201c811",
+								"id": "0de0d3ef-7d4d-49f6-84fd-53d784fcaafc",
 								"exec": [
 									"pm.environment.set(\"usuario\", pm.response.json().data);"
 								],
@@ -344,7 +344,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "c998f31d-cf8e-4fff-9281-dca447bfb770",
+						"id": "796f8af4-d773-49f0-b48a-46e810f23b56",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -354,7 +354,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "10f7d6ee-41f0-4774-a222-fba345561e2a",
+						"id": "88224746-599c-47cc-803c-a45eecdbddb8",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1474,7 +1474,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "b081db9c-6c29-4743-98bd-1f2741ad7175",
+						"id": "6fb42d2b-b6ae-4355-9c20-8b0c876d23d7",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1484,7 +1484,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "d00a6108-0f40-486d-b849-28228f80b5a4",
+						"id": "41b39081-7b83-407b-94b7-c9b02588d0a2",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1763,7 +1763,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "979ac6b6-b476-450a-8c9f-d5f5c4241eb1",
+						"id": "f858266e-a47c-4ea3-8900-d36cf4661a7a",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1773,7 +1773,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "72c3e186-6e50-4f02-a223-4694acf43f0e",
+						"id": "5331d2b1-4c1e-4d81-866f-1e4269c3068b",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -2143,7 +2143,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "a6ae2055-50c4-4d3d-ae19-b5bf2565b7bf",
+						"id": "d5ea518c-6801-44e2-b007-025af4813520",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -2153,7 +2153,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "3c86f884-abc1-4951-925e-aafba4316c38",
+						"id": "9a2a25fc-6a23-4300-b133-a9f165fa2818",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -2414,7 +2414,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "5f712a20-a1eb-420d-9333-a6d7c69f1dca",
+								"id": "0c44a269-02f6-45a6-b8e6-e1222c7cac6c",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -2424,7 +2424,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "861ef44a-de20-4275-9e53-6fcda46964ba",
+								"id": "6c9627e7-4dc5-4fae-b0e7-12b8be762704",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -3962,7 +3962,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "e7830c09-9419-43af-af63-3622dbda4ae3",
+						"id": "be2560e7-ee0b-4b87-a262-fc306e3c72fd",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -3972,7 +3972,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "77f3b3e4-5211-41da-a985-2e160b89ab58",
+						"id": "4d3cd19d-d34d-4080-9042-bca9172f37ee",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -4160,7 +4160,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "348ed6a7-23d4-4115-8832-6b3f70f4cc32",
+						"id": "e9086214-7acc-4668-bbec-42c8c244797b",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -4170,7 +4170,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "34784994-166c-4925-9199-b75376ab2c8d",
+						"id": "cfb38d5b-0b9f-47a3-baf9-f948d2f26df0",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -4528,7 +4528,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "e6812fe5-d7d5-4bbb-b7c5-0a645f437a7e",
+						"id": "c39a6f53-3338-4604-8837-451828f2b0d9",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -4538,7 +4538,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "e721a8aa-3e20-4ff0-b00d-817952429f0e",
+						"id": "f0c618bc-c3ac-4710-9383-bc8867b897cc",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -4721,7 +4721,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "1887c255-95d5-4cc1-bba6-8e2000e73ca4",
+						"id": "b5c8f6fe-5aad-4d62-b91c-58cb0594a975",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -4731,7 +4731,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "6ecd5690-8001-49d0-bbe0-b1f3a8edc04c",
+						"id": "4082e821-6d59-465b-a23d-91cbc37a7467",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -5143,6 +5143,74 @@
 					"response": []
 				}
 			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "transpostadoras",
+			"item": [
+				{
+					"name": "get_transportadora",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/transportadoras?emp={{emp}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"transportadoras"
+							],
+							"query": [
+								{
+									"key": "emp",
+									"value": "{{emp}}"
+								}
+							]
+						},
+						"description": "* Busca todos os fornecedores cadastrados;\n* Parâmetro Adicional:\n\t* Data de Atualização:\n\t\t* Ex: since=2018-04-27+11:05:00;"
+					},
+					"response": []
+				},
+				{
+					"name": "get_all_transportadora",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/transportadoras/all?emp={{emp}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"transportadoras",
+								"all"
+							],
+							"query": [
+								{
+									"key": "emp",
+									"value": "{{emp}}"
+								}
+							]
+						},
+						"description": "* Busca todos os fornecedores cadastrados;\n* Parâmetro Adicional:\n\t* Data de Atualização:\n\t\t* Ex: since=2018-04-27+11:05:00;"
+					},
+					"response": []
+				}
+			],
+			"description": "Captura os dados das transportadoras do sistema Siggma",
 			"protocolProfileBehavior": {}
 		},
 		{
@@ -5794,7 +5862,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "3fa2836c-bc1f-4b56-8408-aa778bb4f436",
+						"id": "f64d56a7-c0d0-4bf6-b1f9-c5a136affae4",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -5804,7 +5872,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "d0a30159-ca6a-4a79-ba32-7cebcbe68051",
+						"id": "d453f24c-458d-4148-9214-2eea04d607a3",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -5819,7 +5887,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "a11ccdff-9afd-45db-a00c-1a1ab8ccad20",
+				"id": "589beb03-9600-4a99-91c2-c11787d0bbfc",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -5829,7 +5897,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "8e9b37cd-d54f-4714-8606-1a60c846b110",
+				"id": "8787027b-1094-4686-8c17-0855e88ffd34",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -5839,37 +5907,37 @@
 	],
 	"variable": [
 		{
-			"id": "06080672-0494-48ee-abfc-67a30610c0b4",
+			"id": "129ad3a2-de75-4dbe-a58c-3b74b7eb0b70",
 			"key": "baseUrl",
 			"value": "https://sistema.zettabrasil.com.br/siggma-integracoesapis"
 		},
 		{
-			"id": "a3d74a86-51e3-4799-8596-48dfdff38252",
+			"id": "152cebc7-827d-43b1-856f-f8d4694c4fa3",
 			"key": "emp",
 			"value": "103"
 		},
 		{
-			"id": "34be589e-f3c8-4567-97dd-fd0802bfa4c3",
+			"id": "edb957bd-f7b1-44a4-9d01-f254745aaf2a",
 			"key": "filial",
 			"value": "1"
 		},
 		{
-			"id": "44361147-825e-42e3-a72d-597518b06f11",
+			"id": "2a4c794b-3d8d-47e6-910b-364ed38f2348",
 			"key": "userAuth",
 			"value": "UsuarioAPI"
 		},
 		{
-			"id": "96c475e9-c135-49d5-af2b-aaad2dd904b5",
+			"id": "40d24985-da0e-45bb-aa4b-86420a424829",
 			"key": "pwdAuth",
 			"value": "SenhaUsuarioAPI"
 		},
 		{
-			"id": "a1ffffab-6ac3-49a2-ba07-22fe09ed13a3",
+			"id": "cd86c059-c6f1-4f58-be6d-59b16d20c42a",
 			"key": "userSiggma",
 			"value": "zettaapis"
 		},
 		{
-			"id": "11ec5247-8a79-48ca-8b3c-9ba95f4d4429",
+			"id": "ad92a0e2-c9e8-44b4-a918-f4b3f2d3a729",
 			"key": "pwdSiggma",
 			"value": "5048fe0420e1237a7584085fa201318061838971346fd777d46518d3114e28da"
 		}
